@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Oct 2026 17:08:19 GMT
+Etag: W/"06b9663ad7fa6a1d2e1a0446fd2e7a3898942b3bb9492c8be80a4d375015a106"
+Last-Modified: Thu, 15 Oct 2026 21:02:05 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: D5B0:219FAB:976948:EA15A3:6AD25A02
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Poll-Interval: 300
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4966
+X-Ratelimit-Reset: 1792172979
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 34
+X-Xss-Protection: 0
+
+{"ref":"refs/tags/protocol/v7.0.0","node_id":"REF_kwDOKA8QOrlyZWZzL3RhZ3MvcHJvdG9jb2wvdjcuMC4w","url":"https://api.github.com/repos/dydxprotocol/v4-chain/git/refs/tags/protocol/v7.0.0","object":{"sha":"fdb1fd329fa1b7000b07946213e26ef8872280a8","type":"commit","url":"https://api.github.com/repos/dydxprotocol/v4-chain/git/commits/fdb1fd329fa1b7000b07946213e26ef8872280a8"}}

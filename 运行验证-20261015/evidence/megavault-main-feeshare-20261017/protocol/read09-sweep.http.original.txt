@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Length: 2992
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Oct 2026 17:39:03 GMT
+Etag: "111ff09ec0d569ac543b07a6093af82c4dd82fe5"
+Last-Modified: Sat, 05 Sep 2026 06:26:27 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: C982:D4E56:99CE35:EF070D:6AD26137
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4907
+X-Ratelimit-Reset: 1792172979
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 93
+X-Xss-Protection: 0
+
+{"name":"sweep_funds.go","path":"protocol/x/vault/keeper/sweep_funds.go","sha":"111ff09ec0d569ac543b07a6093af82c4dd82fe5","size":1338,"url":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/protocol/x/vault/keeper/sweep_funds.go?ref=67a3c71670c460ef92ffb15930dda7047a901f64","html_url":"https://github.com/dydxprotocol/v4-chain/blob/67a3c71670c460ef92ffb15930dda7047a901f64/protocol/x/vault/keeper/sweep_funds.go","git_url":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/111ff09ec0d569ac543b07a6093af82c4dd82fe5","download_url":"https://raw.githubusercontent.com/dydxprotocol/v4-chain/67a3c71670c460ef92ffb15930dda7047a901f64/protocol/x/vault/keeper/sweep_funds.go","type":"file","content":"cGFja2FnZSBrZWVwZXIKCmltcG9ydCAoCglzZGsgImdpdGh1Yi5jb20vY29z\nbW9zL2Nvc21vcy1zZGsvdHlwZXMiCgkiZ2l0aHViLmNvbS9keWR4cHJvdG9j\nb2wvdjQtY2hhaW4vcHJvdG9jb2wvbGliL2xvZyIKCWFzc2V0dHlwZXMgImdp\ndGh1Yi5jb20vZHlkeHByb3RvY29sL3Y0LWNoYWluL3Byb3RvY29sL3gvYXNz\nZXRzL3R5cGVzIgoJImdpdGh1Yi5jb20vZHlkeHByb3RvY29sL3Y0LWNoYWlu\nL3Byb3RvY29sL3gvdmF1bHQvdHlwZXMiCikKCi8vIFN3ZWVwTWFpblZhdWx0\nQmFua0JhbGFuY2VzIGRlcG9zaXRzIGFueSB1c2RjIGJhbGFuY2UgZnJvbSB0\naGUgTWVnYXZhdWx0IG1haW4gdmF1bHQgYmFuayBiYWxhbmNlCi8vIGludG8g\ndGhlIE1lZ2F2YXVsdCBtYWluIHZhdWx0IHN1YmFjY291bnQgYmFsYW5jZS4K\nZnVuYyAoayBLZWVwZXIpIFN3ZWVwTWFpblZhdWx0QmFua0JhbGFuY2UoCglj\ndHggc2RrLkNvbnRleHQsCikgewoJdXNkY0Fzc2V0LCBleGlzdHMgOj0gay5h\nc3NldHNLZWVwZXIuR2V0QXNzZXQoY3R4LCBhc3NldHR5cGVzLkFzc2V0VXNk\nYy5JZCkKCWlmICFleGlzdHMgewoJCWxvZy5FcnJvckxvZygKCQkJY3R4LAoJ\nCQkiU3dlZXBNYWluVmF1bHRCYW5rQmFsYW5jZTogVXNkYyBhc3NldCBub3Qg\nZm91bmQgaW4gc3RhdGUiLAoJCSkKCQlyZXR1cm4KCX0KCW1haW5WYXVsdEJh\nbGFuY2UgOj0gay5iYW5rS2VlcGVyLkdldEJhbGFuY2UoCgkJY3R4LAoJCXR5\ncGVzLk1lZ2F2YXVsdE1haW5BZGRyZXNzLAoJCXVzZGNBc3NldC5EZW5vbSwK\nCSkKCS8vIE5vIGZ1bmRzIHRvIHN3ZWVwCglpZiBtYWluVmF1bHRCYWxhbmNl\nLkFtb3VudC5CaWdJbnQoKS5TaWduKCkgPD0gMCB7CgkJcmV0dXJuCgl9CgoJ\nZXJyIDo9IGsuc3ViYWNjb3VudHNLZWVwZXIuRGVwb3NpdEZ1bmRzRnJvbUFj\nY291bnRUb1N1YmFjY291bnQoCgkJY3R4LAoJCXR5cGVzLk1lZ2F2YXVsdE1h\naW5BZGRyZXNzLAoJCXR5cGVzLk1lZ2F2YXVsdE1haW5TdWJhY2NvdW50LAoJ\nCXVzZGNBc3NldC5JZCwKCQltYWluVmF1bHRCYWxhbmNlLkFtb3VudC5CaWdJ\nbnQoKSwKCSkKCWlmIGVyciAhPSBuaWwgewoJCWxvZy5FcnJvckxvZ1dpdGhF\ncnJvcigKCQkJY3R4LAoJCQkiU3dlZXBNYWluVmF1bHRCYW5rQmFsYW5jZTog\nRmFpbGVkIHRvIHN3ZWVwIGZ1bmRzIGZyb20gbWFpbiB2YXVsdCBiYW5rIGJh\nbGFuY2UgdG8gc3ViYWNjb3VudCIsCgkJCWVyciwKCQkpCgkJcmV0dXJuCgl9\nCgoJY3R4LkV2ZW50TWFuYWdlcigpLkVtaXRFdmVudCgKCQl0eXBlcy5OZXdT\nd2VlcFRvTWVnYXZhdWx0RXZlbnQoCgkJCW1haW5WYXVsdEJhbGFuY2UuQW1v\ndW50LkJpZ0ludCgpLlVpbnQ2NCgpLAoJCSksCgkpCn0K\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/protocol/x/vault/keeper/sweep_funds.go?ref=67a3c71670c460ef92ffb15930dda7047a901f64","git":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/111ff09ec0d569ac543b07a6093af82c4dd82fe5","html":"https://github.com/dydxprotocol/v4-chain/blob/67a3c71670c460ef92ffb15930dda7047a901f64/protocol/x/vault/keeper/sweep_funds.go"}}

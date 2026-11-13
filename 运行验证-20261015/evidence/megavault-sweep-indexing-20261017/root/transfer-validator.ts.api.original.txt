@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Length: 4077
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Oct 2026 18:02:10 GMT
+Etag: "330cab294e07c9d369723e10a918bab40af75b07"
+Last-Modified: Thu, 15 Oct 2026 21:01:59 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: DC7C:3F3F62:9CD94C:F2C7FD:6AD266A2
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4974
+X-Ratelimit-Reset: 1792176630
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 26
+X-Xss-Protection: 0
+
+{"name":"transfer-validator.ts","path":"indexer/services/ender/src/validators/transfer-validator.ts","sha":"330cab294e07c9d369723e10a918bab40af75b07","size":2027,"url":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/indexer/services/ender/src/validators/transfer-validator.ts?ref=50d70ca0f151a6a40f9fa62438d6d85b583d710c","html_url":"https://github.com/dydxprotocol/v4-chain/blob/50d70ca0f151a6a40f9fa62438d6d85b583d710c/indexer/services/ender/src/validators/transfer-validator.ts","git_url":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/330cab294e07c9d369723e10a918bab40af75b07","download_url":"https://raw.githubusercontent.com/dydxprotocol/v4-chain/50d70ca0f151a6a40f9fa62438d6d85b583d710c/indexer/services/ender/src/validators/transfer-validator.ts","type":"file","content":"aW1wb3J0IHsgSW5kZXhlclRlbmRlcm1pbnRFdmVudCwgVHJhbnNmZXJFdmVu\ndFYxIH0gZnJvbSAnQGR5ZHhwcm90b2NvbC1pbmRleGVyL3Y0LXByb3Rvcyc7\nCgppbXBvcnQgeyBIYW5kbGVyIH0gZnJvbSAnLi4vaGFuZGxlcnMvaGFuZGxl\ncic7CmltcG9ydCB7IFRyYW5zZmVySGFuZGxlciB9IGZyb20gJy4uL2hhbmRs\nZXJzL3RyYW5zZmVyLWhhbmRsZXInOwppbXBvcnQgeyBWYWxpZGF0b3IgfSBm\ncm9tICcuL3ZhbGlkYXRvcic7CgpleHBvcnQgY2xhc3MgVHJhbnNmZXJWYWxp\nZGF0b3IgZXh0ZW5kcyBWYWxpZGF0b3I8VHJhbnNmZXJFdmVudFYxPiB7CiAg\ncHVibGljIHZhbGlkYXRlKCk6IHZvaWQgewogICAgLy8gVGhlcmUgbXVzdCBi\nZSBleGFjdGx5IDEgc2VuZGVyLiBFaXRoZXIgYSBzdWJhY2NvdW50IGlkIG9y\nIGEgd2FsbGV0IGFkZHJlc3MuCiAgICBpZiAoCiAgICAgICghdGhpcy5ldmVu\ndC5zZW5kZXIpIHx8CiAgICAgICh0aGlzLmV2ZW50LnNlbmRlciEuc3ViYWNj\nb3VudElkID09PSB1bmRlZmluZWQgJiYgdGhpcy5ldmVudC5zZW5kZXIhLmFk\nZHJlc3MgPT09IHVuZGVmaW5lZCkgfHwKICAgICAgKHRoaXMuZXZlbnQuc2Vu\nZGVyIS5zdWJhY2NvdW50SWQgIT09IHVuZGVmaW5lZCAmJiB0aGlzLmV2ZW50\nLnNlbmRlciEuYWRkcmVzcyAhPT0gdW5kZWZpbmVkKQogICAgKSB7CiAgICAg\nIHJldHVybiB0aGlzLmxvZ0FuZFRocm93UGFyc2VNZXNzYWdlRXJyb3IoCiAg\nICAgICAgJ1RyYW5zZmVyRXZlbnQgbXVzdCBoYXZlIGVpdGhlciBhIHNlbmRl\nciBzdWJhY2NvdW50IGlkIG9yIHNlbmRlciB3YWxsZXQgYWRkcmVzcycsCiAg\nICAgICAgeyBldmVudDogdGhpcy5ldmVudCB9LAogICAgICApOwogICAgfQoK\nICAgIC8vIFRoZXJlIG11c3QgYmUgZXhhY3RseSAxIHJlY2lwaWVudC4gRWl0\naGVyIGEgc3ViYWNjb3VudCBpZCBvciBhIHdhbGxldCBhZGRyZXNzLgogICAg\naWYgKAogICAgICAoIXRoaXMuZXZlbnQucmVjaXBpZW50KSB8fAogICAgICAo\ndGhpcy5ldmVudC5yZWNpcGllbnQhLnN1YmFjY291bnRJZCA9PT0gdW5kZWZp\nbmVkICYmCiAgICAgICAgdGhpcy5ldmVudC5yZWNpcGllbnQhLmFkZHJlc3Mg\nPT09IHVuZGVmaW5lZCkgfHwKICAgICAgKHRoaXMuZXZlbnQucmVjaXBpZW50\nIS5zdWJhY2NvdW50SWQgIT09IHVuZGVmaW5lZCAmJgogICAgICAgIHRoaXMu\nZXZlbnQucmVjaXBpZW50IS5hZGRyZXNzICE9PSB1bmRlZmluZWQpCiAgICAp\nIHsKICAgICAgcmV0dXJuIHRoaXMubG9nQW5kVGhyb3dQYXJzZU1lc3NhZ2VF\ncnJvcigKICAgICAgICAnVHJhbnNmZXJFdmVudCBtdXN0IGhhdmUgZWl0aGVy\nIGEgcmVjaXBpZW50IHN1YmFjY291bnQgaWQgb3IgcmVjaXBpZW50IHdhbGxl\ndCBhZGRyZXNzJywKICAgICAgICB7IGV2ZW50OiB0aGlzLmV2ZW50IH0sCiAg\nICAgICk7CiAgICB9CgogICAgaWYgKAogICAgICB0aGlzLmV2ZW50LnJlY2lw\naWVudCEuYWRkcmVzcyAhPT0gdW5kZWZpbmVkICYmCiAgICAgIHRoaXMuZXZl\nbnQuc2VuZGVyIS5hZGRyZXNzICE9PSB1bmRlZmluZWQKICAgICkgewogICAg\nICByZXR1cm4gdGhpcy5sb2dBbmRUaHJvd1BhcnNlTWVzc2FnZUVycm9yKAog\nICAgICAgICdUcmFuc2ZlckV2ZW50IGNhbm5vdCBoYXZlIGJvdGggYSBzZW5k\nZXIgYW5kIHJlY2lwaWVudCB3YWxsZXQgYWRkcmVzcycsCiAgICAgICAgeyBl\ndmVudDogdGhpcy5ldmVudCB9LAogICAgICApOwogICAgfQogIH0KCiAgcHVi\nbGljIGNyZWF0ZUhhbmRsZXJzKAogICAgaW5kZXhlclRlbmRlcm1pbnRFdmVu\ndDogSW5kZXhlclRlbmRlcm1pbnRFdmVudCwKICAgIHR4SWQ6IG51bWJlciwK\nICAgIF86IHN0cmluZywKICApOiBIYW5kbGVyPFRyYW5zZmVyRXZlbnRWMT5b\nXSB7CiAgICByZXR1cm4gWwogICAgICBuZXcgVHJhbnNmZXJIYW5kbGVyKAog\nICAgICAgIHRoaXMuYmxvY2ssCiAgICAgICAgdGhpcy5ibG9ja0V2ZW50SW5k\nZXgsCiAgICAgICAgaW5kZXhlclRlbmRlcm1pbnRFdmVudCwKICAgICAgICB0\neElkLAogICAgICAgIHRoaXMuZXZlbnQsCiAgICAgICksCiAgICBdOwogIH0K\nfQo=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/indexer/services/ender/src/validators/transfer-validator.ts?ref=50d70ca0f151a6a40f9fa62438d6d85b583d710c","git":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/330cab294e07c9d369723e10a918bab40af75b07","html":"https://github.com/dydxprotocol/v4-chain/blob/50d70ca0f151a6a40f9fa62438d6d85b583d710c/indexer/services/ender/src/validators/transfer-validator.ts"}}

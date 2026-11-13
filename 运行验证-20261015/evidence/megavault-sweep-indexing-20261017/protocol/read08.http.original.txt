@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Length: 2278
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Oct 2026 18:03:54 GMT
+Etag: "089b49ddd3db93e6780242600f95ab9d2c8bd607"
+Last-Modified: Sat, 05 Sep 2026 06:26:27 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: BF08:B613F:9F84BA:F64DC2:6AD2670A
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4970
+X-Ratelimit-Reset: 1792176630
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 30
+X-Xss-Protection: 0
+
+{"name":"on_chain_updates.go","path":"protocol/indexer/indexer_manager/on_chain_updates.go","sha":"089b49ddd3db93e6780242600f95ab9d2c8bd607","size":755,"url":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/protocol/indexer/indexer_manager/on_chain_updates.go?ref=67a3c71670c460ef92ffb15930dda7047a901f64","html_url":"https://github.com/dydxprotocol/v4-chain/blob/67a3c71670c460ef92ffb15930dda7047a901f64/protocol/indexer/indexer_manager/on_chain_updates.go","git_url":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/089b49ddd3db93e6780242600f95ab9d2c8bd607","download_url":"https://raw.githubusercontent.com/dydxprotocol/v4-chain/67a3c71670c460ef92ffb15930dda7047a901f64/protocol/indexer/indexer_manager/on_chain_updates.go","type":"file","content":"cGFja2FnZSBpbmRleGVyX21hbmFnZXIKCmltcG9ydCAoCgkiZm10IgoJImdp\ndGh1Yi5jb20vY29zbW9zL2dvZ29wcm90by9wcm90byIKCSJnaXRodWIuY29t\nL2R5ZHhwcm90b2NvbC92NC1jaGFpbi9wcm90b2NvbC9pbmRleGVyL21zZ3Nl\nbmRlciIKKQoKY29uc3QgKAoJY3JlYXRlRXJyTXNnICAgICAgICAgID0gIkNh\nbm5vdCBjcmVhdGUgbWVzc2FnZS4iCglvbkNoYWluRXZlbnRzS2Fma2FLZXkg\nPSAib25fY2hhaW5fZXZlbnRzIgopCgovLyBDcmVhdGVJbmRleGVyQmxvY2tF\ndmVudE1lc3NhZ2UgY3JlYXRlcyBhbiBvbi1jaGFpbiB1cGRhdGUgbWVzc2Fn\nZSBmb3IgYWxsIHRoZSBJbmRleGVyIGV2ZW50cyBpbiBhIGJsb2NrLgpmdW5j\nIENyZWF0ZUluZGV4ZXJCbG9ja0V2ZW50TWVzc2FnZSgKCWJsb2NrICpJbmRl\neGVyVGVuZGVybWludEJsb2NrLAopIG1zZ3NlbmRlci5NZXNzYWdlIHsKCWVy\nck1lc3NhZ2UgOj0gIkVycm9yIGNyZWF0aW5nIG9uLWNoYWluIEluZGV4ZXIg\nYmxvY2sgZXZlbnQgbWVzc2FnZS4iCgllcnJEZXRhaWxzIDo9IGZtdC5TcHJp\nbnRmKCJCbG9jazogJSt2IiwgKmJsb2NrKQoKCXVwZGF0ZSwgZXJyIDo9IHBy\nb3RvLk1hcnNoYWwoYmxvY2spCglpZiBlcnIgIT0gbmlsIHsKCQlwYW5pYyhm\nbXQuU3ByaW50ZigiJXMgJXMgRXJyOiAlK3YgJXNcbiIsIGVyck1lc3NhZ2Us\nIGNyZWF0ZUVyck1zZywgZXJyLCBlcnJEZXRhaWxzKSkKCX0KCglyZXR1cm4g\nbXNnc2VuZGVyLk1lc3NhZ2V7VmFsdWU6IHVwZGF0ZX0KfQo=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/protocol/indexer/indexer_manager/on_chain_updates.go?ref=67a3c71670c460ef92ffb15930dda7047a901f64","git":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/089b49ddd3db93e6780242600f95ab9d2c8bd607","html":"https://github.com/dydxprotocol/v4-chain/blob/67a3c71670c460ef92ffb15930dda7047a901f64/protocol/indexer/indexer_manager/on_chain_updates.go"}}

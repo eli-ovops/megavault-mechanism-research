@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Length: 2043
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Oct 2026 17:37:49 GMT
+Etag: "967ca96a9be07da1f9c7241a157ed8ddc17dfa77"
+Last-Modified: Sat, 05 Sep 2026 06:26:27 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: 0FBC:1D67EA:9A0397:EEFB01:6AD260ED
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4911
+X-Ratelimit-Reset: 1792172979
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 89
+X-Xss-Protection: 0
+
+{"name":"grpc_query_unconditional_revshare.go","path":"protocol/x/revshare/keeper/grpc_query_unconditional_revshare.go","sha":"967ca96a9be07da1f9c7241a157ed8ddc17dfa77","size":523,"url":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/protocol/x/revshare/keeper/grpc_query_unconditional_revshare.go?ref=67a3c71670c460ef92ffb15930dda7047a901f64","html_url":"https://github.com/dydxprotocol/v4-chain/blob/67a3c71670c460ef92ffb15930dda7047a901f64/protocol/x/revshare/keeper/grpc_query_unconditional_revshare.go","git_url":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/967ca96a9be07da1f9c7241a157ed8ddc17dfa77","download_url":"https://raw.githubusercontent.com/dydxprotocol/v4-chain/67a3c71670c460ef92ffb15930dda7047a901f64/protocol/x/revshare/keeper/grpc_query_unconditional_revshare.go","type":"file","content":"cGFja2FnZSBrZWVwZXIKCmltcG9ydCAoCgkiY29udGV4dCIKCglzZGsgImdp\ndGh1Yi5jb20vY29zbW9zL2Nvc21vcy1zZGsvdHlwZXMiCgkiZ2l0aHViLmNv\nbS9keWR4cHJvdG9jb2wvdjQtY2hhaW4vcHJvdG9jb2wveC9yZXZzaGFyZS90\neXBlcyIKKQoKZnVuYyAoayBLZWVwZXIpIFVuY29uZGl0aW9uYWxSZXZTaGFy\nZUNvbmZpZygKCWN0eCBjb250ZXh0LkNvbnRleHQsCglyZXEgKnR5cGVzLlF1\nZXJ5VW5jb25kaXRpb25hbFJldlNoYXJlQ29uZmlnLAopICgqdHlwZXMuUXVl\ncnlVbmNvbmRpdGlvbmFsUmV2U2hhcmVDb25maWdSZXNwb25zZSwgZXJyb3Ip\nIHsKCWNvbmZpZywgZXJyIDo9IGsuR2V0VW5jb25kaXRpb25hbFJldlNoYXJl\nQ29uZmlnUGFyYW1zKHNkay5VbndyYXBTREtDb250ZXh0KGN0eCkpCglpZiBl\ncnIgIT0gbmlsIHsKCQlyZXR1cm4gbmlsLCBlcnIKCX0KCXJldHVybiAmdHlw\nZXMuUXVlcnlVbmNvbmRpdGlvbmFsUmV2U2hhcmVDb25maWdSZXNwb25zZXsK\nCQlDb25maWc6IGNvbmZpZywKCX0sIG5pbAp9Cg==\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/protocol/x/revshare/keeper/grpc_query_unconditional_revshare.go?ref=67a3c71670c460ef92ffb15930dda7047a901f64","git":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/967ca96a9be07da1f9c7241a157ed8ddc17dfa77","html":"https://github.com/dydxprotocol/v4-chain/blob/67a3c71670c460ef92ffb15930dda7047a901f64/protocol/x/revshare/keeper/grpc_query_unconditional_revshare.go"}}

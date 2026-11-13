@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Length: 2658
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Oct 2026 17:08:32 GMT
+Etag: "44e25c5d63f1c59a98eb3a705b5e4e77933b8213"
+Last-Modified: Thu, 15 Oct 2026 21:01:59 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: 7B7C:1E6A65:955D37:E7F68D:6AD25A0F
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4962
+X-Ratelimit-Reset: 1792172979
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 38
+X-Xss-Protection: 0
+
+{"name":"vault-start-pnl.ts","path":"indexer/services/comlink/src/caches/vault-start-pnl.ts","sha":"44e25c5d63f1c59a98eb3a705b5e4e77933b8213","size":1021,"url":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/indexer/services/comlink/src/caches/vault-start-pnl.ts?ref=50d70ca0f151a6a40f9fa62438d6d85b583d710c","html_url":"https://github.com/dydxprotocol/v4-chain/blob/50d70ca0f151a6a40f9fa62438d6d85b583d710c/indexer/services/comlink/src/caches/vault-start-pnl.ts","git_url":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/44e25c5d63f1c59a98eb3a705b5e4e77933b8213","download_url":"https://raw.githubusercontent.com/dydxprotocol/v4-chain/50d70ca0f151a6a40f9fa62438d6d85b583d710c/indexer/services/comlink/src/caches/vault-start-pnl.ts","type":"file","content":"aW1wb3J0IHsgTm9kZUVudiB9IGZyb20gJ0BkeWR4cHJvdG9jb2wtaW5kZXhl\nci9iYXNlJzsKaW1wb3J0IHsKICBQbmxUaWNrc0Zyb21EYXRhYmFzZSwKICBQ\nbmxUaWNrc1RhYmxlLAp9IGZyb20gJ0BkeWR4cHJvdG9jb2wtaW5kZXhlci9w\nb3N0Z3Jlcyc7CmltcG9ydCBfIGZyb20gJ2xvZGFzaCc7CgppbXBvcnQgeyBn\nZXRWYXVsdE1hcHBpbmcsIGdldFZhdWx0UG5sU3RhcnREYXRlIH0gZnJvbSAn\nLi4vbGliL2hlbHBlcnMnOwppbXBvcnQgeyBWYXVsdE1hcHBpbmcgfSBmcm9t\nICcuLi90eXBlcyc7CgpsZXQgdmF1bHRTdGFydFBubDogUG5sVGlja3NGcm9t\nRGF0YWJhc2VbXSA9IFtdOwoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHN0YXJ0\nVmF1bHRTdGFydFBubENhY2hlKCk6IFByb21pc2U8dm9pZD4gewogIGNvbnN0\nIHZhdWx0TWFwcGluZzogVmF1bHRNYXBwaW5nID0gYXdhaXQgZ2V0VmF1bHRN\nYXBwaW5nKCk7CiAgdmF1bHRTdGFydFBubCA9IGF3YWl0IFBubFRpY2tzVGFi\nbGUuZ2V0TGF0ZXN0UG5sVGljaygKICAgIF8ua2V5cyh2YXVsdE1hcHBpbmcp\nLAogICAgLy8gQWRkIGEgYnVmZmVyIG9mIDEwIG1pbnV0ZXMgdG8gZ2V0IHRo\nZSBmaXJzdCBQbkwgdGljayBmb3IgUG5MIGRhdGEgYXMgUG5MIHRpY2tzIGFy\nZW4ndAogICAgLy8gY3JlYXRlZCBleGFjdGx5IG9uIHRoZSBob3VyLgogICAg\nZ2V0VmF1bHRQbmxTdGFydERhdGUoKS5wbHVzKHsgbWludXRlczogMTAgfSks\nCiAgKTsKfQoKZXhwb3J0IGZ1bmN0aW9uIGdldFZhdWx0U3RhcnRQbmwoKTog\nUG5sVGlja3NGcm9tRGF0YWJhc2VbXSB7CiAgcmV0dXJuIHZhdWx0U3RhcnRQ\nbmw7Cn0KCmV4cG9ydCBmdW5jdGlvbiBjbGVhclZhdWx0U3RhcnRQbmwoKTog\ndm9pZCB7CiAgaWYgKHByb2Nlc3MuZW52Lk5PREVfRU5WICE9PSBOb2RlRW52\nLlRFU1QpIHsKICAgIHRocm93IEVycm9yKCdjYW5ub3QgY2xlYXIgdmF1bHQg\nc3RhcnQgcG5sIGNhY2hlIG91dHNpZGUgb2YgdGVzdCBlbnZpcm9ubWVudCcp\nOwogIH0KCiAgdmF1bHRTdGFydFBubCA9IFtdOwp9Cg==\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/indexer/services/comlink/src/caches/vault-start-pnl.ts?ref=50d70ca0f151a6a40f9fa62438d6d85b583d710c","git":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/44e25c5d63f1c59a98eb3a705b5e4e77933b8213","html":"https://github.com/dydxprotocol/v4-chain/blob/50d70ca0f151a6a40f9fa62438d6d85b583d710c/indexer/services/comlink/src/caches/vault-start-pnl.ts"}}

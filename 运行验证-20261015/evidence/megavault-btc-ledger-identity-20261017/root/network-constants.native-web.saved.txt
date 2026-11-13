@@ -1,0 +1,119 @@
+Network Constants · dYdX · v4 (https://docs.dydx.exchange/infrastructure_providers-network/network_constants)
+citeturn618view0 [wordlim: 200] Crawled: yesterday; Content type: text/html; Source: click({"ref_id":"turn616view3","id":29}); Total lines: 260
+L0: [Input: Search documentation…]
+L1: 
+L2:   * Introduction
+L3:   * cite0†About dYdX L4:   * cite1†Getting Started L5:   * cite2†Onboarding FAQs L6:   * cite3†Trading Fees L7:   * Chain Users
+L8:   * Rewards
+L9: 
+L10:     * cite4†Overview L11:     * cite5†Staking Rewards L12:     * cite6†Trading Rewards L13: 
+L14:   * Governance
+L15: 
+L16:     * cite7†Proposing a New Market L17:     * cite8†Submitting a Proposal L18:     * cite9†Reading a Proposal L19:     * cite10†Voting on a Proposal L20:     * cite11†Slashing a Validator L21:     * cite12†Functionalities L22: 
+L23:   * Guides
+L24:     * cite13†How to Troubleshoot Withdrawals and Deposits L25:     * cite14†Fireblocks and dYdX L26: 
+L27:   * cite15†User Submitted Questions L28:   * Chain Infrastructure
+L29:   * Validators & Full-Nodes
+L30: 
+L31:     * cite16†Hardware Requirements L32:     * cite17†Required Node Configs L33:     * cite18†Set Up a Full Node L34:     * cite19†Optimize Your Full Node L35:     * cite20†Running a Validator L36:     * cite21†Snapshots L37:     * cite22†Full Node Streaming L38:     * Upgrades
+L39:       * cite23†Types of Upgrades L40:       * cite24†Performing Upgrades L41:       * cite25†Cosmovisor L42:       * cite26†Using Cosmovisor to stage dYdX Chain binary upgrade L43:       * cite27†Upgrading Sidecar L44: 
+L45:     * cite28†Peering with Gateway L46: 
+L47:   * Network Configuration
+L48: 
+L49:     * cite29†Network Constants L50:     * cite30†Resources L51:     * cite31†Faucet Funds (Testnet Only) L52: 
+L53:   * Indexer Operators
+L54: 
+L55:     * cite32†Software Checklist L56:     * cite33†Indexer Usage Estimates L57: 
+L58:   * API Integrations
+L59:   * Client Documentation
+L60:     * cite34†Indexer Client L61:     * cite35†Socket Client L62:     * cite36†Validator Client L63:     * cite37†Composite Client L64: 
+L65:   * Indexer Documentation
+L66: 
+L67:     * cite38†Indexer API L68:     * cite39†Indexer Websocket L69: 
+L70:   * cite40†Full Node Streaming API L71:   * cite41†Repositories L72:   * Trading
+L73: 
+L74:     * cite42†Rate Limits L75:     * cite43†Other Limits L76:     * cite44†Order Types L77:     * cite45†Short-term vs Stateful L78:     * cite46†Isolated Markets L79: 
+L80:   * Deposits and Withdrawals
+L81:     * cite47†CLI Commands L82:     * cite48†How to Send Usdc from Ethereum to Dydx L83:     * cite49†Rate Limits and Gating L84: 
+L85:   * cite50†Constants L86:   * Guides
+L87:     * cite51†Getting started with the Typescript client L88:     * cite52†API Trading with Classic Python Client L89:     * cite53†CLI Python Script L90:     * cite54†How to uncross the orderbook L91:     * cite55†How to interpret block data for trades L92:     * cite56†Setting up Raspberry Pi for API Trading L93:     * cite57†How to transfer tokens between accounts L94:     * cite58†How to integrate APIs with FE isolated positions L95:     * cite59†How to Permissioned Keys L96: 
+L97:   * Technical Concepts
+L98:   * Architecture
+L99:     * cite60†Architectural Overview L100:     * cite61†Indexer L101: 
+L102:   * Trading
+L103: 
+L104:     * cite62†Margin L105:     * cite63†Rewards Fees and Parameters L106: 
+L107:   * cite64†Limit Order Book and Matching L108:   * Policies
+L109:   * cite65†Security L110:   * cite66†Terms of Use & Privacy L111: 
+L112:   * Introduction
+L113:   * cite0†About dYdX L114:   * cite1†Getting Started L115:   * cite2†Onboarding FAQs L116:   * cite3†Trading Fees L117:   * Chain Users
+L118:   * Rewards
+L119: 
+L120:     * cite4†Overview L121:     * cite5†Staking Rewards L122:     * cite6†Trading Rewards L123: 
+L124:   * Governance
+L125:     * cite7†Proposing a New Market L126:     * cite8†Submitting a Proposal L127:     * cite9†Reading a Proposal L128:     * cite10†Voting on a Proposal L129:     * cite11†Slashing a Validator L130:     * cite12†Functionalities L131: 
+L132:   * Guides
+L133: 
+L134:     * cite13†How to Troubleshoot Withdrawals and Deposits L135:     * cite14†Fireblocks and dYdX L136: 
+L137:   * cite15†User Submitted Questions L138:   * Chain Infrastructure
+L139:   * Validators & Full-Nodes
+L140:     * cite16†Hardware Requirements L141:     * cite17†Required Node Configs L142:     * cite18†Set Up a Full Node L143:     * cite19†Optimize Your Full Node L144:     * cite20†Running a Validator L145:     * cite21†Snapshots L146:     * cite22†Full Node Streaming L147:     * Upgrades
+L148: 
+L149:       * cite23†Types of Upgrades L150:       * cite24†Performing Upgrades L151:       * cite25†Cosmovisor L152:       * cite26†Using Cosmovisor to stage dYdX Chain binary upgrade L153:       * cite27†Upgrading Sidecar L154: 
+L155:     * cite28†Peering with Gateway L156: 
+L157:   * Network Configuration
+L158:     * cite29†Network Constants L159:       * cite67†Chain ID L160:       * cite68†Native Token Denom L161:       * cite69†Chain Registry L162:     * cite30†Resources L163:     * cite31†Faucet Funds (Testnet Only) L164: 
+L165:   * Indexer Operators
+L166: 
+L167:     * cite32†Software Checklist L168:     * cite33†Indexer Usage Estimates L169: 
+L170:   * API Integrations
+L171:   * Client Documentation
+L172: 
+L173:     * cite34†Indexer Client L174:     * cite35†Socket Client L175:     * cite36†Validator Client L176:     * cite37†Composite Client L177: 
+L178:   * Indexer Documentation
+L179: 
+L180:     * cite38†Indexer API L181:     * cite39†Indexer Websocket L182:   * cite40†Full Node Streaming API L183:   * cite41†Repositories L184:   * Trading
+L185: 
+L186:     * cite42†Rate Limits L187:     * cite43†Other Limits L188:     * cite44†Order Types L189:     * cite45†Short-term vs Stateful L190:     * cite46†Isolated Markets L191: 
+L192:   * Deposits and Withdrawals
+L193: 
+L194:     * cite47†CLI Commands L195:     * cite48†How to Send Usdc from Ethereum to Dydx L196:     * cite49†Rate Limits and Gating L197: 
+L198:   * cite50†Constants L199:   * Guides
+L200:     * cite51†Getting started with the Typescript client L201:     * cite52†API Trading with Classic Python Client L202:     * cite53†CLI Python Script L203:     * cite54†How to uncross the orderbook L204:     * cite55†How to interpret block data for trades L205:     * cite56†Setting up Raspberry Pi for API Trading L206:     * cite57†How to transfer tokens between accounts L207:     * cite58†How to integrate APIs with FE isolated positions L208:     * cite59†How to Permissioned Keys L209: 
+L210:   * Technical Concepts
+L211:   * Architecture
+L212:     * cite60†Architectural Overview L213:     * cite61†Indexer L214: 
+L215:   * Trading
+L216: 
+L217:     * cite62†Margin L218:     * cite63†Rewards Fees and Parameters L219: 
+L220:   * cite64†Limit Order Book and Matching L221:   * Policies
+L222:   * cite65†Security L223:   * cite66†Terms of Use & Privacy L224:   * cite70†Testnet App ↗ (opens in a new tab)†v4.testnet.dydx.exchange L225: 
+L226: On This Page
+L227: 
+L228:   * cite67†Chain ID L229:   * cite68†Native Token Denom L230:   * cite69†Chain Registry L231: 
+L232: cite71†Edit this page†github.com L233: # Network Constants
+L234: 
+L235: ## Chain ID
+L236: 
+L237: [Button: dydx-testnet-4][Button: dydx-mainnet-1]
+L238: 
+L239: For Testnet:
+L240: 
+L241:     `CHAIN_ID=dydx-testnet-4`
+L242: 
+L243: ## Native Token Denom
+L244: 
+L245: [Button: dydx-testnet-4][Button: dydx-mainnet-1]
+L246: 
+L247: For Testnet:
+L248: 
+L249:     `NATIVE_TOKEN_DENOM=adv4tnt`
+L250: ## Chain Registry
+L251: 
+L252: [Button: dydx-testnet-4][Button: dydx-mainnet-1]
+L253: 
+L254: For Testnet: cite72†"dydxtestnet" in the chain-registry GitHub repository (opens in a new tab)†github.com .
+L255: 
+L256: cite28†Peering with Gateway cite30†Resources L257: 
+L258: * * *
+L259: Disclaimer: Note that as of the date hereof, the testnet and dYdX Chain deployment by DYDX token holders are the only known deployments of the dYdX v4 software, and other deployment options may be added. For more information, please see cite73†https://dydx.exchange/dydx-chain-front-end-options†dydx.exchange 

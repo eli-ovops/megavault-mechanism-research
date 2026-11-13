@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Length: 3719
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Oct 2026 17:08:31 GMT
+Etag: "bd3ac2d0abdb630483f7043da1681f958b23be1f"
+Last-Modified: Thu, 15 Oct 2026 21:01:59 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: 7B5C:195961:9573A9:E869D8:6AD25A0F
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4964
+X-Ratelimit-Reset: 1792172979
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 36
+X-Xss-Protection: 0
+
+{"name":"server.ts","path":"indexer/services/comlink/src/request-helpers/server.ts","sha":"bd3ac2d0abdb630483f7043da1681f958b23be1f","size":1798,"url":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/indexer/services/comlink/src/request-helpers/server.ts?ref=50d70ca0f151a6a40f9fa62438d6d85b583d710c","html_url":"https://github.com/dydxprotocol/v4-chain/blob/50d70ca0f151a6a40f9fa62438d6d85b583d710c/indexer/services/comlink/src/request-helpers/server.ts","git_url":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/bd3ac2d0abdb630483f7043da1681f958b23be1f","download_url":"https://raw.githubusercontent.com/dydxprotocol/v4-chain/50d70ca0f151a6a40f9fa62438d6d85b583d710c/indexer/services/comlink/src/request-helpers/server.ts","type":"file","content":"aW1wb3J0IGJvZHlQYXJzZXIgZnJvbSAnYm9keS1wYXJzZXInOwppbXBvcnQg\nY29tcHJlc3Npb24gZnJvbSAnY29tcHJlc3Npb24nOwppbXBvcnQgY29ycyBm\ncm9tICdjb3JzJzsKaW1wb3J0IGV4cHJlc3MsIHsgRXhwcmVzcyB9IGZyb20g\nJ2V4cHJlc3MnOwppbXBvcnQgcmVxdWVzdElkIGZyb20gJ2V4cHJlc3MtcmVx\ndWVzdC1pZCc7CmltcG9ydCByZXNwb25zZVRpbWUgZnJvbSAncmVzcG9uc2Ut\ndGltZSc7CmltcG9ydCBzd2FnZ2VyVWkgZnJvbSAnc3dhZ2dlci11aS1leHBy\nZXNzJzsKCmltcG9ydCAqIGFzIHN3YWdnZXJKc29uIGZyb20gJy4uLy4uL3B1\nYmxpYy9zd2FnZ2VyLmpzb24nOwppbXBvcnQgY29uZmlnIGZyb20gJy4uL2Nv\nbmZpZyc7CmltcG9ydCB7IGxvZ0Vycm9ycyB9IGZyb20gJy4vZXJyb3ItaGFu\nZGxlcic7CmltcG9ydCBnZW9IZWFkZXJzTWlkZGxld2FyZSBmcm9tICcuL2dl\nby1oZWFkZXJzLW1pZGRsZXdhcmUnOwppbXBvcnQgUmVxdWVzdExvZ2dlciBm\ncm9tICcuL3JlcXVlc3QtbG9nZ2VyJzsKaW1wb3J0IHJlc0JvZHlDYXB0dXJl\nIGZyb20gJy4vcmVzLWJvZHktY2FwdHVyZSc7CgpleHBvcnQgZGVmYXVsdCBm\ndW5jdGlvbiBzZXJ2ZXIoCiAgaW5kZXhWND86IGV4cHJlc3MuUm91dGVyLAop\nOiBFeHByZXNzIHsKICBjb25zdCBhcHA6IEV4cHJlc3MgPSBleHByZXNzKCk7\nCgogIGFwcC51c2UoZ2VvSGVhZGVyc01pZGRsZXdhcmUpOwoKICBhcHAudXNl\nKHJlc3BvbnNlVGltZSh7IHN1ZmZpeDogZmFsc2UgfSkpOwoKICBhcHAudXNl\nKHJlcXVlc3RJZCgpKTsKCiAgLy8gTXVzdCBiZSByZWdpc3RlcmVkIGJlZm9y\nZSByZXNCb2R5Q2FwdHVyZSBzbyB0aGF0IHJlcy5ib2R5IChsb2dnZWQgYnkg\nUmVxdWVzdExvZ2dlcikgaG9sZHMgdGhlCiAgLy8gdW5jb21wcmVzc2VkIHJl\nc3BvbnNlIHJhdGhlciB0aGFuIGd6aXAgYnl0ZXMuCiAgaWYgKGNvbmZpZy5D\nT01QUkVTU0lPTl9FTkFCTEVEKSB7CiAgICBhcHAudXNlKGNvbXByZXNzaW9u\nKCkpOwogIH0KCiAgYXBwLnVzZShyZXNCb2R5Q2FwdHVyZSk7CgogIGNvbnN0\nIGNvcnNPcHRpb25zID0gewogICAgb3JpZ2luOiBjb25maWcuQ09SU19PUklH\nSU4sCiAgICBvcHRpb25zU3VjY2Vzc1N0YXR1czogMjAwLAogIH07CgogIGFw\ncC51c2UoY29ycyhjb3JzT3B0aW9ucykpOwoKICBhcHAuZ2V0KCcvaGVhbHRo\nJywgKF9yZXE6IGV4cHJlc3MuUmVxdWVzdCwgcmVzOiBleHByZXNzLlJlc3Bv\nbnNlKSA9PiB7CiAgICByZXMuanNvbih7IG9rOiB0cnVlIH0pOwogIH0pOwoK\nICBhcHAudXNlKChfcmVxOiBleHByZXNzLlJlcXVlc3QsIF9yZXM6IGV4cHJl\nc3MuUmVzcG9uc2UsIG5leHQ6IGV4cHJlc3MuTmV4dEZ1bmN0aW9uKSA9PiBu\nZXh0KCkpOwoKICBhcHAudXNlKGJvZHlQYXJzZXIuanNvbigpKTsKCiAgYXBw\nLnVzZShSZXF1ZXN0TG9nZ2VyKTsKCiAgaWYgKGluZGV4VjQpIHsKICAgIGFw\ncC51c2UoJy92NCcsIGluZGV4VjQpOwogIH0KCiAgYXBwLnVzZSgnL2RvY3Mn\nLCBzd2FnZ2VyVWkuc2VydmUsIHN3YWdnZXJVaS5zZXR1cChzd2FnZ2VySnNv\nbikpOwoKICAvLyBMb2cgYWxsIG90aGVyIGVycm9ycyBiZWZvcmUgYmVpbmcg\ncGFzc2VkIHRvIGRlZmF1bHQgZXJyb3IgaGFuZGxlcgogIGFwcC51c2UobG9n\nRXJyb3JzKTsKCiAgYXBwLnVzZSgoX3JlcTogZXhwcmVzcy5SZXF1ZXN0LCBy\nZXM6IGV4cHJlc3MuUmVzcG9uc2UpID0+IHsKICAgIHJlcy5zdGF0dXMoNDA0\nKS5qc29uKHsKICAgICAgZXJyb3I6ICdOb3QgRm91bmQnLAogICAgICBlcnJv\nckNvZGU6IDQwNCwKICAgIH0pOwogIH0pOwoKICByZXR1cm4gYXBwOwp9Cg==\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/indexer/services/comlink/src/request-helpers/server.ts?ref=50d70ca0f151a6a40f9fa62438d6d85b583d710c","git":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/bd3ac2d0abdb630483f7043da1681f958b23be1f","html":"https://github.com/dydxprotocol/v4-chain/blob/50d70ca0f151a6a40f9fa62438d6d85b583d710c/indexer/services/comlink/src/request-helpers/server.ts"}}

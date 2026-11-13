@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Length: 2838
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Oct 2026 17:37:49 GMT
+Etag: "fb363f9d8c34466ebde7840ee5cd2e73813aaaed"
+Last-Modified: Sat, 05 Sep 2026 06:26:27 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: 0F9E:1B1F7D:9A37A8:EEA779:6AD260EC
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4914
+X-Ratelimit-Reset: 1792172979
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 86
+X-Xss-Protection: 0
+
+{"name":"revshare.proto","path":"proto/dydxprotocol/revshare/revshare.proto","sha":"fb363f9d8c34466ebde7840ee5cd2e73813aaaed","size":1209,"url":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/proto/dydxprotocol/revshare/revshare.proto?ref=67a3c71670c460ef92ffb15930dda7047a901f64","html_url":"https://github.com/dydxprotocol/v4-chain/blob/67a3c71670c460ef92ffb15930dda7047a901f64/proto/dydxprotocol/revshare/revshare.proto","git_url":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/fb363f9d8c34466ebde7840ee5cd2e73813aaaed","download_url":"https://raw.githubusercontent.com/dydxprotocol/v4-chain/67a3c71670c460ef92ffb15930dda7047a901f64/proto/dydxprotocol/revshare/revshare.proto","type":"file","content":"c3ludGF4ID0gInByb3RvMyI7CnBhY2thZ2UgZHlkeHByb3RvY29sLnJldnNo\nYXJlOwoKaW1wb3J0ICJjb3Ntb3NfcHJvdG8vY29zbW9zLnByb3RvIjsKaW1w\nb3J0ICJnb2dvcHJvdG8vZ29nby5wcm90byI7CgpvcHRpb24gZ29fcGFja2Fn\nZSA9ICJnaXRodWIuY29tL2R5ZHhwcm90b2NvbC92NC1jaGFpbi9wcm90b2Nv\nbC94L3JldnNoYXJlL3R5cGVzIjsKCi8vIE1hcmtldE1hcHBlclJldlNoYXJl\nRGV0YWlscyBzcGVjaWZpZXMgYW55IGRldGFpbHMgYXNzb2NpYXRlZCB3aXRo\nIHRoZSBtYXJrZXQKLy8gbWFwcGVyIHJldmVudWUgc2hhcmUKbWVzc2FnZSBN\nYXJrZXRNYXBwZXJSZXZTaGFyZURldGFpbHMgewogIC8vIFVuaXggdGltZXN0\nYW1wIHJlY29yZGVkIHdoZW4gdGhlIG1hcmtldCByZXZlbnVlIHNoYXJlIGV4\ncGlyZXMKICB1aW50NjQgZXhwaXJhdGlvbl90cyA9IDE7Cn0KCi8vIFVuY29u\nZGl0aW9uYWxSZXZTaGFyZUNvbmZpZyBzdG9yZXMgcmVjaXBpZW50cyB0aGF0\nCi8vIHJlY2VpdmUgYSBzaGFyZSBvZiBuZXQgcmV2ZW51ZSB1bmNvbmRpdGlv\nbmFsbHkuCm1lc3NhZ2UgVW5jb25kaXRpb25hbFJldlNoYXJlQ29uZmlnIHsK\nICAvLyBEZXNjcmliZXMgdGhlIGNvbmZpZyBvZiBhIHJlY2lwaWVudAogIG1l\nc3NhZ2UgUmVjaXBpZW50Q29uZmlnIHsKICAgIC8vIEFkZHJlc3Mgb2YgdGhl\nIHJlY2VwaWVudC4KICAgIHN0cmluZyBhZGRyZXNzID0gMTsKICAgIC8vIFBl\ncmNlbnRhZ2Ugb2YgbmV0IHJldmVudWUgdG8gc2hhcmUgd2l0aCByZWNpcGll\nbnQsIGluIHBhcnRzLXBlci1taWxsaW9uLgogICAgdWludDMyIHNoYXJlX3Bw\nbSA9IDI7CiAgfQogIC8vIENvbmZpZ3MgZm9yIGVhY2ggcmVjaXBpZW50Lgog\nIHJlcGVhdGVkIFJlY2lwaWVudENvbmZpZyBjb25maWdzID0gMSBbIChnb2dv\ncHJvdG8ubnVsbGFibGUpID0gZmFsc2UgXTsKfQoKLy8gTWVzc2FnZSB0byBz\nZXQgdGhlIG9yZGVyIHJvdXRlciByZXZlbnVlIHNoYXJlCm1lc3NhZ2UgT3Jk\nZXJSb3V0ZXJSZXZTaGFyZSB7CiAgLy8gVGhlIGFkZHJlc3Mgb2YgdGhlIG9y\nZGVyIHJvdXRlci4KICBzdHJpbmcgYWRkcmVzcyA9IDEgWyAoY29zbW9zX3By\nb3RvLnNjYWxhcikgPSAiY29zbW9zLkFkZHJlc3NTdHJpbmciIF07CgogIC8v\nIFRoZSBzaGFyZSBvZiB0aGUgcmV2ZW51ZSB0byBiZSBwYWlkIHRvIHRoZSBv\ncmRlciByb3V0ZXIuCiAgdWludDMyIHNoYXJlX3BwbSA9IDI7Cn0K\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/proto/dydxprotocol/revshare/revshare.proto?ref=67a3c71670c460ef92ffb15930dda7047a901f64","git":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/fb363f9d8c34466ebde7840ee5cd2e73813aaaed","html":"https://github.com/dydxprotocol/v4-chain/blob/67a3c71670c460ef92ffb15930dda7047a901f64/proto/dydxprotocol/revshare/revshare.proto"}}

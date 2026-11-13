@@ -1,0 +1,469 @@
+gRPC Tx simulation sometimes fails with account sequence mismatch · Issue #11597 · cosmos/cosmos-sdk (https://github.com/cosmos/cosmos-sdk/issues/11597)
+citeturn621search0 [wordlim: 200] Published: 4.5 years ago; Crawled: 4 months ago;     ` "account sequence mismatch, expected 1509, got 1512: incorrect account sequence", details: [], metadata: MetadataMap { headers: {"content-type": "application/grpc", "x-cosmos-block-height": "5481"} } ... Below are more logs up acc seq 1513 (all the rest after were fine) ... After testing more, experimenting with different changes in hermes, talking to @marbar3778, opened https://github.com/informalsystems/ibc-rs/issues/2249 with my understanding and a proposed workaround that seems to work for hermes.
+
+# gRPC Tx simulation sometimes fails with account sequence mismatch #11597
+
+New issue
+
+Copy link
+
+New issue
+
+Copy link
+
+Closed
+
+Closed
+
+gRPC Tx simulation sometimes fails with account sequence mismatch#11597
+
+Copy link
+
+Labels
+
+S:proposed
+
+## Description
+
+ancazamfir
+
+opened on Apr 11, 2022
+
+Issue body actions
+
+## Summary of Bug
+
+gRPC Tx simulation sometimes fails with account sequence mismatch. This is seen with a higher number of Tx-es spawning multiple blocks.
+
+## Version
+
+v0.45.1
+(running gaia v7.0.0)
+
+## Steps to Reproduce
+
+To reproduce I run hermes relayer with a high number of transactions. In the log below there are 526 IBC messages generated. Hermes bundles 15 per transaction and performs a tx simulate followed by `broadcast_tx_sync`. Normally if simulation fails hermes breaks the loop but I modified it here to continue. The error in this run is:
+    
+    ` "account sequence mismatch, expected 1509, got 1512: incorrect account sequence", details: [], metadata: MetadataMap { headers: {"content-type": "application/grpc", "x-cosmos-block-height": "5481"} }
+    `
+
+But then the next simulate seems perfectly fine, the simulate for seg 1513 works fine.
+
+The symptom is that the simulation context sometimes "forgets" previous calls but recovers quickly after. Not sure if there are some caching glitches (maybe around block boundary) or we are using the gRPC wrongly. If the former I expect this to be reproducible with any type of transactions.
+
+In this run:
+
+  * first Tx (seq 1508) was eventually included in block 5481
+  * the next (1508-1538), including the one that failed simulation (seq 1512) were included in 5482:
+    * 1508-1511 simulation works fine
+    * 1512 simulation fails
+    * 1513-... simulation works fine
+  * the last (1539-1543) were included in 5483
+
+Below are more logs up acc seq 1513 (all the rest after were fine)
+    
+    `2022-04-11T14:30:58.640661Z  INFO ThreadId(59) packet_cmd{src_chain=ibc-1 src_port=transfer src_channel=channel-0 dst_chain=ibc-0}:relay{odata=PBE8O38QpJ ->Destination @1-5376; len=525}: assembled batch of 526 message(s)
+    2022-04-11T14:30:58.694100Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}:estimate_gas: tx simulation successful, gas amount used: 1162682
+    2022-04-11T14:30:58.694639Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}: send_tx: using 1162682 gas, fee Fee { amount: "2326stake", gas_limit: 2325364 } id=ibc-0
+    2022-04-11T14:30:58.708255Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}: broadcast_tx_sync: Response { code: Ok, data: Data([]), log: Log("[]"), hash: transaction::Hash(2ADF3899564CB78F34927ACB8CBF6199CA18F237C3716AA599F7EE7D5608FD3C) }
+    
+    2022-04-11T14:30:58.708523Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}: sending 15 messages using account sequence AccountSequence(1510)
+    2022-04-11T14:30:58.710246Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}: max fee, for use in tx simulation: Fee { amount: "4001stake", gas_limit: 4000000 }
+    2022-04-11T14:30:58.729467Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}:estimate_gas: tx simulation successful, gas amount used: 1162665
+    2022-04-11T14:30:58.729750Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}: send_tx: using 1162665 gas, fee Fee { amount: "2326stake", gas_limit: 2325330 } id=ibc-0
+    2022-04-11T14:30:58.778153Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}: max fee, for use in tx simulation: Fee { amount: "4001stake", gas_limit: 4000000 }
+    2022-04-11T14:30:58.786158Z  WARN ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}:estimate_gas: failed to simulate tx, falling back on default gas because the error is potentially recoverable: gRPC call failed with status: status: Unknown, message: "account sequence mismatch, expected 1509, got 1512: incorrect account sequence", details: [], metadata: MetadataMap { headers: {"content-type": "application/grpc", "x-cosmos-block-height": "5481"} }
+    2022-04-11T14:30:58.786400Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}: send_tx: using 4000000 gas, fee Fee { amount: "4001stake", gas_limit: 4000000 } id=ibc-0
+    2022-04-11T14:30:58.801198Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}: broadcast_tx_sync: Response { code: Ok, data: Data([]), log: Log("[]"), hash: transaction::Hash(39C606B3A10D9F9175B2E2AC17108C4F42ABF97A7C3911AA41F95936180C9E4D) }
+    
+    2022-04-11T14:30:58.801412Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}: sending 15 messages using account sequence AccountSequence(1513)
+    2022-04-11T14:30:58.802668Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}: max fee, for use in tx simulation: Fee { amount: "4001stake", gas_limit: 4000000 }
+    2022-04-11T14:30:58.894121Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}:estimate_gas: tx simulation successful, gas amount used: 1162745
+    2022-04-11T14:30:58.894369Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}: send_tx: using 1162745 gas, fee Fee { amount: "2326stake", gas_limit: 2325490 } id=ibc-0
+    2022-04-11T14:30:58.907547Z DEBUG ThreadId(40) send_tx_check{id=PBE8O38QpJ}:send_tx{id=ibc-0}: broadcast_tx_sync: Response { code: Ok, data: Data([]), log: Log("[]"), hash: transaction::Hash(26C864956FC26924E8B2F2941EB0B7A7F9276676F4660B6BDEDB583A54D5D8CD) }
+    ...
+    `
+
+## Activity
+
+ancazamfir
+
+mentioned this on Apr 12, 2022
+
+  * Hermes takes a very long time to clear high number of pending packets informalsystems/hermes#2087
+
+### alexanderbez commented on Apr 12, 2022
+
+alexanderbez
+
+on Apr 12, 2022
+
+Contributor
+
+More actions
+
+IIRC, simulation uses the CheckTx state that is built up during a block prior to being committed. The idea that there is high volume here, at least per (relayer) account, can indicate that there is a lag between state that is in CheckTx and ultimately committed.
+
+I don't totally have a good answer to provide here in terms of remediation, but the whole "nonce mismatch" due to high volume accounts has been well reported over time. The only thing I can suggest is to wait a block or two prior to submitting txs or use multiple accounts round-robin style.
+
+### ancazamfir commented on Apr 12, 2022
+
+ancazamfir
+
+on Apr 12, 2022
+
+Author
+
+More actions
+
+thanks @alexanderbez
+
+> IIRC, simulation uses the CheckTx state that is built up during a block prior to being committed. The idea that there is high volume here, at least per (relayer) account, can indicate that there is a lag between state that is in CheckTx and ultimately committed.
+
+But if that's the case wouldn't we see errors during execution (`DeliverTx`)? And if it's the same state for both simulate and CheckTx, wouldn't we see the error in both? Instead we see that "build up" failing during simulate but not on CheckTx (`broadcast_tx_sync` doesn't show the error).
+
+> ..."nonce mismatch" due to high volume accounts has been well reported over time
+
+I tried to find related issues and wasn't able. Could you point me to any? Maybe it will help me understand better the root cause.
+
+> ...wait a block or two prior to submitting txs
+
+Could you please clarify? I don't understand how it would help.
+
+### alexanderbez commented on May 2, 2022
+
+alexanderbez
+
+on May 2, 2022
+
+Contributor
+
+More actions
+
+Both `CheckTx` and `Simulate` (which is actually a query under the hood), both use the same state in `BaseApp`. So if simulate would fail prior to block N being committed, then surely CheckTx for that same tx would fail too. Maybe what is happening is that `Simulate` and `CheckTx` are being executed at different block heights, thus having a different "base" state.
+
+### ancazamfir commented on May 31, 2022
+
+ancazamfir
+
+on May 31, 2022
+
+Author
+
+More actions
+
+sorry for the late update. After testing more, experimenting with different changes in hermes, talking to @marbar3778, opened https://github.com/informalsystems/ibc-rs/issues/2249 with my understanding and a proposed workaround that seems to work for hermes.
+We also discussed with Marko if it would be possible to have a `simulateTx` flag to ignore the account sequence check. Not sure how feasible, Marko mentioned that he will discuss with you/ SDK team.
+thanks for the help with this!
+
+👍React with 👍1 mcjcloud
+
+### alexanderbez commented on May 31, 2022
+
+alexanderbez
+
+on May 31, 2022
+
+Contributor
+
+More actions
+
+> We also discussed with Marko if it would be possible to have a simulateTx flag to ignore the account sequence check. Not sure how feasible, Marko mentioned that he will discuss with you/ SDK team.
+
+This is extremely trivial and easy:
+    
+    diff --git a/x/auth/ante/sigverify.go b/x/auth/ante/sigverify.go
+    index c77632a7d0..2fb07dda4f 100644
+    --- a/x/auth/ante/sigverify.go
+    +++ b/x/auth/ante/sigverify.go
+    @@ -265,7 +265,7 @@ func (svd SigVerificationDecorator) AnteHandle(ctx sdk.Context, tx sdk.Tx, simul
+                    }
+     
+                    // Check account sequence number.
+    -               if sig.Sequence != acc.GetSequence() {
+    +               if sig.Sequence != acc.GetSequence() && !simulate {
+
+👍React with 👍1 mcjcloud
+
+### alexanderbez commented on May 31, 2022
+
+alexanderbez
+
+on May 31, 2022
+
+Contributor
+
+More actions
+
+@marbar3778 is this what you had in mind?
+
+### ancazamfir commented on Nov 16, 2022
+
+ancazamfir
+
+on Nov 16, 2022
+
+Author
+
+More actions
+
+Another possibility discussed with @marbar3778, @sergio-mena and @adizere is to have Simulate gRPC return an error during recheck Tx. Would require a new abci flag to signal the last rechecked Tx.
+This would handle the root cause we were seeing in informalsystems/hermes#2249
+
+### alexanderbez commented on Nov 16, 2022
+
+alexanderbez
+
+on Nov 16, 2022
+
+Contributor
+
+More actions
+
+Mhhh simulation is just an ABCI query. What does that have to do with the ReCheckTx flow?
+
+### ancazamfir commented on Nov 17, 2022
+
+ancazamfir
+
+on Nov 17, 2022
+
+Last edited by ancazamfir
+
+Author
+
+More actions
+
+We want to be able to tell if a Simulation error happens while mempool is doing recheck tx. hermes caches the account sequence and is not aware of when recheck happens. Currently when we get the account mismatch errors during simulation, we dig out in the error log and assume that an account mismatch error with got > expected is caused by this scenario which may not be the case.
+
+### alexanderbez commented on Nov 17, 2022
+
+alexanderbez
+
+on Nov 17, 2022
+
+Contributor
+
+More actions
+
+So you're saying that you think that Hermes is getting the sequence mismatch error due to the Simulation query happening concurrently with ReCheckTx for that same tx?
+
+If so, I have no Idea how the Simulation query would know if ReCheckTx is happening concurrently for that tx...or even in general?
+
+### ancazamfir commented on Nov 17, 2022
+
+ancazamfir
+
+on Nov 17, 2022
+
+Author
+
+More actions
+
+> So you're saying that you think that Hermes is getting the sequence mismatch error due to the Simulation query happening concurrently with ReCheckTx for that same tx?
+
+Not for the same Tx, a new one. When hermes simulates a `Tx(seq=N)`, it does so after it had previously broadcasted (`broadcast_tx_sync`) successfully `Tx(seq=1),..., Tx(seq=N-1)`. Some may have been included in blocks, some of the recent ones may be in the mempool and in some cases being recheckTx-ed. If they are being rechecked simulation of the new one fails.
+
+### alexanderbez commented on Nov 18, 2022
+
+alexanderbez
+
+on Nov 18, 2022
+
+Contributor
+
+More actions
+
+So I brought up an approach today during today's SDK community call that I think was confirmed would work as a reasonable solution. The idea is to bypass the nonce check during simulation. I've pushed a demo PR for experimentation purposes HERE. Please test it out and lmk what you think. If it works, then we can push it through.
+
+### ancazamfir commented on Nov 18, 2022
+
+ancazamfir
+
+on Nov 18, 2022
+
+Author
+
+More actions
+
+Thanks @alexanderbez
+
+This partially solves the problem. The issues I see is in the case simulation failures (without your changes) are legitimate, for example same wallet has been used outside the relayer. In this case we get a simulation error of type `got < expected` and we recache the account sequence. Without this simulation error, hermes ends up submitting a transaction that fails in checkTx.
+Also, with your changes, we still hit errors in some cases due to the fact that recheck is in progress. This is when the transaction are "ordered" in other way than the account nonce. An example is for ordered IBC channels where we will still get a simulation error, something like `packet sequence ≠ next receive sequence (X ≠ Y)`, with X > Y. It happens if `Tx(packet sequence X)` is simulated before the `Tx(packet sequence Y)` has been rechecked.
+
+I did run some test with your PR and I do see less simulation errors. Will do more testing but in summary, it is better except in the cases above. We should probably also look if we break in other ways hermes, other relayers, or other user flows.
+
+Unique-Divine--------------------------------------------------------------------------------
+testnets/testnet-tuesdays/gameday01/README.md at master · cosmos/testnets · GitHub (https://github.com/cosmos/testnets/blob/master/testnet-tuesdays/gameday01/README.md)
+citeturn621search1 [wordlim: 200] Published: 2.7 years ago; Crawled: last week;     * REST API: `curl “<API URL>/cosmos/gov/v1beta1/proposals/<proposal id>/votes?pagination.limit=1000” -H “x-cosmos-block-height:<height>”`
+
+# Testnet Game Day # 1: 2024-Jan-24
+
+For our first-ever game day, we will experiment with how we respond to changes during software upgrades. We will post announcements in the `testnet-announcements` channel in Discord to coordinate activities during the event.
+
+  * Start time: `2024-01-24 14:30 UTC`
+  * Estimated end time: `2024-01-24 15:30 UTC`
+
+## Recap
+
+  * 39 validators participated
+  * The event runtime was exactly 1 hour
+  * Two software upgrades were scheduled
+    * One upgrade was canceled via governance with a `cancel-software-upgrade` proposal
+    * One upgrade was skipped via the `unsafe-skip-upgrades` flag
+
+### Lessons learned & findings
+
+  * Votes for past proposals can be obtained by querying a block height when the proposal was still active.
+    * REST API: `curl “<API URL>/cosmos/gov/v1beta1/proposals/<proposal id>/votes?pagination.limit=1000” -H “x-cosmos-block-height:<height>”`
+    * Gaia CLI: `gaiad q gov votes <proposal id> --height <height>`
+  * The `--unsafe-skip-upgrades <block height>` flag can be seen as a last-resort mechanism for skipping an upgrade that is deemed unacceptable, but coordination is critical to make sure the chain does not halt when the upgrade height is reached.
+--------------------------------------------------------------------------------
+GitHub - InjectiveLabs/stitch: A height-aware multi-protocol gateway for Cosmos and Injective node fleets. · GitHub (https://github.com/InjectiveLabs/stitch)
+citeturn621search2 [wordlim: 200] Crawled: 4 days ago;     * Cosmos REST / gRPC-Gateway ... Cosmos gRPC understands both `x-cosmos-block-height` metadata and supported request-body height fields.
+
+The two existing projects in this space — `decentrio/gateway` and `notional-labs/subnode` — each pick one or two of those concerns. stitch is built from the ground up to do all of them at once, with a clean abstraction where each piece is independently testable and replaceable.
+
+## Features
+
+  * 8 protocol listeners, all in one process:
+    * CometBFT RPC (URI + JSON-RPC over HTTP)
+    * Cosmos gRPC (transparent proxy + gRPC-Web)
+    * Cosmos REST / gRPC-Gateway
+    * EVM JSON-RPC HTTP (8 namespaces, 92 methods)
+    * EVM JSON-RPC WebSocket
+    * Injective ChainStream gRPC v1beta1 + v2
+    * `/injstream-ws` JSON-RPC bridge
+    * admin (`/healthz`, `/readyz`, `/metrics`, `/admin/*`)
+  * Height-aware routing with overlapping-range coverage shapes (archive, bounded, open, pruned). Selector picks narrowest backend that covers the request, sparing the archive for what actually needs it. Cosmos gRPC understands both `x-cosmos-block-height` metadata and supported request-body height fields.
+  * Failover — circuit breakers per `(backend, protocol)`; transport, 5xx, dial-error retries; non-idempotent broadcasts skip retry by design.
+      -d '{"height":180102279}' \
+      stitch.example.com:443 \
+      cosmos.base.tendermint.v1beta1.Service.GetBlockByHeight
+
+The embedded gRPC manifest covers `GetBlockByHeight`, `GetValidatorSetByHeight`, `ABCIQuery`, staking `HistoricalInfo`, and `GetBlockWithTxs`. It also covers the IBC fee queries whose `query_height` field explicitly selects the local block height: `IncentivizedPackets`, `IncentivizedPacket`, `IncentivizedPacketsForChannel`, and `FeeEnabledChannels`.
+
+A positive `x-cosmos-block-height` metadata value takes precedence over the body for compatibility. When only the body supplies the height, stitch adds the matching metadata on the upstream call so Cosmos BaseApp queries open the same historical store version. Unknown methods remain transparent and route as latest unless metadata is supplied; stitch deliberately does not guess from unrelated fields such as proof heights or range-filter heights.
+
+#### Cosmos gRPC circuit outcomes
+
+The gRPC circuit is shared by methods on each backend. Successful calls count as successes; `Unavailable`, `DeadlineExceeded`, and expired caller deadlines count as failures. --------------------------------------------------------------------------------
+IBC-Demo feedback.md · GitHub (https://gist.github.com/tgrecojs/03a0141b8aca54ced85438ec6dff54be?permalink_comment_id=4599542)
+citeturn621search3 [wordlim: 200] Crawled: 2 weeks ago; Without the rest of the properties, the ag-solo wallet is unable to handle the setup for the local samolean issue. ...     2023-05-31T22:37:06.212096Z ERROR ThreadId(26) worker.batch{chain=ibc-0}:supervisor.handle_batch{chain=ibc-0}:supervisor.process_batch{chain=ibc-0}:worker.packet.cmd{src_chain=ibc-0 src_port=transfer src_channel=channel-0 dst_chain=agoriclocal}:relay{odata=d6cdcb6b ->Destination @0-185; len=1}:send_messages_and_wait_check_tx{chain=agoriclocal tracking_id=d6cdcb6b}:send_tx_with_account_sequence_retry{chain=agoriclocal account.sequence=48}:estimate_gas: failed to simulate tx. propagating error to caller: gRPC call failed with status: status: Unknown, message: "account sequence mismatch, expected 61, got 48: incorrect account sequence [agoric-labs/[REDACTED_EMAIL].1.0.20230323035240-8551678e04db/x/auth/ante/sigverify.go:265] With gas wanted: '0' and gas used: '48801' ", details: [], metadata: MetadataMap { headers: {"content-type": "application/grpc", "x-cosmos-block-height": "399"} }
+    WARN: Are you sure you want a new connection & clients to be created? Hermes will use default security parameters.
+    Hint: Consider using the default invocation
+    
+    hermes create channel --a-port <PORT-ID> --b-port <PORT-ID> --a-chain <CHAIN-A-ID> --a-connection <CONNECTION-A-ID>
+    
+    to re-use a pre-existing connection. yes
+    2023-05-31T22:18:48.298113Z  INFO ThreadId(01) Creating new clients, new connection, and a new channel with order ORDER_UNORDERED
+    2023-05-31T22:18:48.317640Z ERROR ThreadId(01) foreign_client.create{client=agoriclocal->ibc-0:07-tendermint-0}: failed to create client: error raised while creating client for chain ibc-0: failed sending message to dst chain : gRPC call failed with status: status: NotFound, message: "account cosmos1jjrue7k7c90lpw5l9agge6d650hx99aarjssz4 not found", details: [], metadata: MetadataMap { headers: {"content-type": "application/grpc", "x-cosmos-block-height": "601"} }
+    ERROR error raised while creating client for chain ibc-0: failed sending message to dst chain : gRPC call failed with status: status: NotFound, message: "account cosmos1jjrue7k7c90lpw5l9agge6d650hx99aarjssz4 not found", details: [], metadata: MetadataMap { headers: {"content-type": "application/grpc", "x-cosmos-block-height": "601"} }
+
+In order to get past this I had to run the following command
+    
+    hermes keys add --chain ibc-0 --mnemonic-file ./.gm/ibc-0/wallet_seed.json --overwrite
+
+After registering the key with hermes I was fine to set up the new client connection.
+
+### General Feedback for IBC
+
+This feedback isn't specific to your demo but I thought it was important to make note of it.
+
+The errors below all come from the log following the execution of `hermes start`. I noticed various issues arising when trying to send IBC transactions, and they all seemed to have stemmed from the agoriclocal chain not having minimum gas price config set.
+
+If you search for "error" in the output below you'll see several logs similiar to this one:
+    
+    2023-05-31T22:37:06.212096Z ERROR ThreadId(26) worker.batch{chain=ibc-0}:supervisor.handle_batch{chain=ibc-0}:supervisor.process_batch{chain=ibc-0}:worker.packet.cmd{src_chain=ibc-0 src_port=transfer src_channel=channel-0 dst_chain=agoriclocal}:relay{odata=d6cdcb6b ->Destination @0-185; len=1}:send_messages_and_wait_check_tx{chain=agoriclocal tracking_id=d6cdcb6b}:send_tx_with_account_sequence_retry{chain=agoriclocal account.sequence=48}:estimate_gas: failed to simulate tx. propagating error to caller: gRPC call failed with status: status: Unknown, message: "account sequence mismatch, expected 61, got 48: incorrect account sequence [agoric-labs/[REDACTED_EMAIL].1.0.20230323035240-8551678e04db/x/auth/ante/sigverify.go:265] With gas wanted: '0' and gas used: '48801' ", details: [], metadata: MetadataMap { headers: {"content-type": "application/grpc", "x-cosmos-block-height": "399"} }
+--------------------------------------------------------------------------------
+Some queries - "all", "wallet balances at height" · GitHub (https://gist.github.com/cordt-sei/185b99ca11ea4907246c3bccd57e9088)
+citeturn621search4 [wordlim: 200] Crawled: last week;     curl -s -X GET -H "Content-Type: application/json" -H "x-cosmos-block-height: ${atHeight}" "${restAddress}/cosmos/bank/v1beta1/balances/${walletAddress}" | jq ".balances[] | select(.denom == \"${tokenDenom}\")"
+              }
+            ]
+          },
+          {
+            "type": "coin_received",
+            "attributes": [
+              {
+                "key": "cmVjZWl2ZXI=",
+                "value": "c2VpMXF2NDVlazQ5aHF1cHg2M3U4bG1lOXZjeWxhcmozcWU3ZjdjeTk5",
+                "index": true
+              },
+              {
+                "key": "YW1vdW50",
+                "value": null,
+                "index": true
+              }
+            ]
+          },
+          {
+            "type": "coin_received",
+            "attributes": [
+              {
+                "key": "cmVjZWl2ZXI=",
+                "value": "c2VpMXY0bXg2aG1yZGE1a3VjbnB3ZGpzcXFxcXFxcXFxcXBxczNrYXgy",
+                "index": true
+              },
+              {
+                "key": "YW1vdW50",
+                "value": "Mjd1c2Vp",
+                "index": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "pagination": {
+      "next_key": null,
+      "total": "1"
+    }
+    }
+
+## query wallet at height, with filter for specific denom
+    
+    restAddress='https://rest-osmosis.ecostake.com'
+    walletAddress=''
+    atHeight=''
+    tokenDenom=''
+    curl -s -X GET -H "Content-Type: application/json" -H "x-cosmos-block-height: ${atHeight}" "${restAddress}/cosmos/bank/v1beta1/balances/${walletAddress}" | jq ".balances[] | select(.denom == \"${tokenDenom}\")"
+
+Details
+    
+    {
+      "denom": "uosmo",
+      "amount": "500643576"
+    }--------------------------------------------------------------------------------
+GitHub - verana-labs/verana-indexer · GitHub (https://github.com/verana-labs/verana-indexer)
+citeturn621search5 [wordlim: 200] Crawled: 6 days ago; It not only indexes blocks, transactions, and accounts from Cosmos SDK-based blockchains, but also plays a critical role in the Verifiable Trust architecture by enabling verifiable credential verification and trust resolution for services and agents on the Verana network. ...   * `USE_HEIGHT_SYNC_TD` – Set to `true` (recommended/default in `.env.example`) to enable ledger-backed Trust Deposit synchronization by block height (GET `/verana/td/v1/get/{id}` with `x-cosmos-block-height`).
+    * rolling multi-height verification window (3 heights)
+  * See `docs/services/crawl-pp/crawl-pp.md` for flow and verification details.
+
+Trust Deposit (TD) Height-Sync Refactor
+
+  * `USE_HEIGHT_SYNC_TD` – Set to `true` (recommended/default in `.env.example`) to enable ledger-backed Trust Deposit synchronization by block height (GET `/verana/td/v1/get/{id}` with `x-cosmos-block-height`). When unset or `false`, the indexer uses the legacy event/message processor path.
+  * See `docs/services/crawl-td/td-height-sync.md` for flow, supported messages, and module layout.
+
+Content gateways
+
+  * `IPFS_GATEWAY`, `REQUEST_IPFS_TIMEOUT`, `MAX_CONTENT_LENGTH_BYTE`, `MAX_BODY_LENGTH_BYTE`, `S3_GATEWAY` – Timeouts and size caps used when fetching off-chain artifacts from IPFS/S3 during DID or credential syncing.
+
+Miscellaneous
+
+  * `ADD_INTER_NAMESPACE_MIDDLEWARE`, `VALIDATOR_ENABLED` – Feature flags for cross-namespace middleware and validator logic.
+  * `DB_STORAGE_MAX_MB`, `NODE_MEMORY_CRITICAL_MB`, `NODE_MEMORY_RESUME_MB` – Health guard thresholds for DB growth and crawler memory pressure.
+
+Refer to the Moleculer configuration reference if you need to drill into any of these settings.
+
+--------------------------------------------------------------------------------
+Newton Privacy Layer vs Fairblock: Technical Comparison Analysis · GitHub (https://gist.github.com/denniswon/32ba5dad6d44ee72de34710735a8d03e?permalink_comment_id=6055873)
+citeturn621search6 [wordlim: 200] Published: 7 months ago; Crawled: today;  | Client → encrypt tx with Master Public Key + condition ID (e.g. block height) ...  | │ Validator Set │ EigenLayer restaked operators (ETH economic │ Cosmos SDK validators (staked FAIRY tokens) │ ...  | │ Cosmos Support │ Not supported │ Native via x/pep module + IBC │
+--------------------------------------------------------------------------------
+Newton Privacy Layer vs Fairblock: Technical Comparison Analysis · GitHub (https://gist.github.com/denniswon/32ba5dad6d44ee72de34710735a8d03e?permalink_comment_id=6021188)
+citeturn621search7 [wordlim: 200] Published: 7 months ago; Crawled: today;  | │ Validator Set │ EigenLayer restaked operators (ETH economic │ Cosmos SDK validators (staked FAIRY tokens) │
+--------------------------------------------------------------------------------
+Releases · Stride-Labs/stride · GitHub (https://github.com/Stride-Labs/stride/releases)
+citeturn621search8 [wordlim: 200] Crawled: today; This commit was created on GitHub.com and signed with GitHub’s verified signature. ... Stride Proposal #284 seeks to upgrade the chain to the v34.0.0 tag of the Stride codebase at block height 40506004, which is estimated to occur on Wednesday Sep 23rd 2026 at 15:00 UTC. ...   * Upgraded to Cosmos SDK v0.50
+--------------------------------------------------------------------------------
+Newton Privacy Layer vs Fairblock: Technical Comparison Analysis · GitHub (https://gist.github.com/denniswon/32ba5dad6d44ee72de34710735a8d03e?permalink_comment_id=6017502)
+citeturn621search9 [wordlim: 200] Published: 7 months ago; Crawled: today;  | │ Native Chain │ No own chain — runs on EigenLayer (Ethereum) │ FairyRing (Cosmos SDK app-chain) │ ...  | │ Cosmos Support │ Not supported │ Native via x/pep module + IBC │

@@ -1,0 +1,199 @@
+testnets/testnet-tuesdays/gameday01/README.md at master · cosmos/testnets · GitHub (https://github.com/cosmos/testnets/blob/master/testnet-tuesdays/gameday01/README.md)
+citeturn622view0 [wordlim: 200] Crawled: last week; Content type: text/html; Source: open({"ref_id":"https://github.com/cosmos/testnets/blob/master/testnet-tuesdays/gameday01/README.md","lineno":null}); Total lines: 282
+L0: cite0†Skip to content L1: ## Navigation Menu
+L2: 
+L3: cite1†Sign in L4: 
+L5: Appearance settings
+L6: 
+L7:   * Platform
+L8: 
+L9:     * AI CODE CREATION
+L10:       * cite2†GitHub CopilotWrite better code with AI L11:       * cite3†GitHub Copilot appDirect agents from issue to merge L12:       * cite4†MCP RegistryIntegrate external tools L13: 
+L14:     * DEVELOPER WORKFLOWS
+L15:       * cite5†ActionsAutomate any workflow L16:       * cite6†CodespacesInstant dev environments L17:       * cite7†IssuesPlan and track work L18:       * cite8†Code ReviewManage code changes L19:       * cite9†Code QualityEnforce quality at merge L20:     * APPLICATION SECURITY
+L21:       * cite10†GitHub Advanced SecurityFind and fix vulnerabilities L22:       * cite11†Code securitySecure your code as you build L23:       * cite12†Secret protectionStop leaks before they start L24: 
+L25:     * EXPLORE
+L26:       * cite13†Why GitHub L27:       * cite14†Documentation†docs.github.com L28:       * cite15†Blog†github.blog L29:       * cite16†Changelog†github.blog L30:       * cite17†Marketplace L31: 
+L32: cite18†View all features L33: 
+L34:   * Solutions
+L35:     * BY COMPANY SIZE
+L36:       * cite19†Enterprises L37:       * cite20†Small and medium teams L38:       * cite21†Startups L39:       * cite22†Nonprofits L40: 
+L41:     * BY USE CASE
+L42:       * cite23†App Modernization L43:       * cite24†DevSecOps L44:       * cite25†DevOps L45:       * cite26†CI/CD L46:       * cite27†View all use cases L47: 
+L48:     * BY INDUSTRY
+L49:       * cite28†Healthcare L50:       * cite29†Financial services L51:       * cite30†Manufacturing L52:       * cite31†Government L53:       * cite32†View all industries L54: 
+L55: cite33†View all solutions L56: 
+L57:   * Resources
+L58:     * EXPLORE BY TOPIC
+L59:       * cite34†AI L60:       * cite35†Software Development L61:       * cite36†DevOps L62:       * cite37†Security L63:       * cite38†View all topics L64: 
+L65:     * EXPLORE BY TYPE
+L66:       * cite39†Customer stories L67:       * cite40†Events & webinars L68:       * cite41†Ebooks & reports L69:       * cite42†Business insights L70:       * cite43†GitHub Skills†skills.github.com L71:     * SUPPORT & SERVICES
+L72:       * cite14†Documentation†docs.github.com L73:       * cite44†Customer support†support.github.com L74:       * cite45†Community forum L75:       * cite46†Trust center L76:       * cite47†Partners L77: 
+L78: cite48†View all resources L79: 
+L80:   * Open Source
+L81: 
+L82:     * COMMUNITY
+L83:       * cite49†GitHub SponsorsFund open source developers L84:     * PROGRAMS
+L85:       * cite50†Security Lab†securitylab.github.com L86:       * cite51†Maintainer Community†maintainers.github.com L87:       * cite52†GitHub Stars†stars.github.com L88:       * cite53†Archive Program†archiveprogram.github.com L89: 
+L90:     * REPOSITORIES
+L91:       * cite54†Topics L92:       * cite55†Trending L93:       * cite56†Collections L94: 
+L95:   * Enterprise
+L96: 
+L97:     * ENTERPRISE SOLUTIONS
+L98:       * cite19†Enterprise platformAI-powered developer platform L99:     * AVAILABLE ADD-ONS
+L100:       * cite10†GitHub Advanced SecurityEnterprise-grade security features L101:       * cite57†Copilot for BusinessEnterprise-grade AI features L102:       * cite58†Premium SupportEnterprise-grade 24/7 support L103: 
+L104:   * cite59†Pricing L105: 
+L106: Search`/`
+L107: 
+L108: cite1†Sign in L109: 
+L110: cite60†Sign up L111: 
+L112: Appearance settings
+L113: You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
+L114: 
+L115: cite61†cosmos / cite62†testnets Public
+L116: 
+L117:   * cite63†Notifications You must be signed in to change notification settings
+L118:   * cite63†Fork 185 L119:   * cite63†Star L120:   * cite62†Code L121:   * cite64†Issues 3 L122:   * cite65†Pull requests 0 L123:   * cite66†Actions L124:   * cite67†Security and quality 0 L125:   * cite68†Insights L126: 
+L127: Additional navigation options
+L128: ## Files Expand file tree
+L129: 
+L130: master
+L131: 
+L132: ## Breadcrumbs
+L133: 
+L134:   1. cite69†testnets L135:   2. /cite70†testnet-tuesdays L136:   3. /cite71†gameday01 L137: 
+L138: /
+L139: 
+L140: # README.md
+L141: 
+L142: Copy path
+L143: 
+L144: [Input: Go to file]
+L145: 
+L146: Blame More file actions
+L147: 
+L148: Blame More file actions
+L149: 
+L150: ## Latest commit
+L151: 
+L152: 
+L153: 
+L154: ## History
+L155: 
+L156: History
+L157: 
+L158: master
+L159: 
+L160: ## Breadcrumbs
+L161: 
+L162:   1. cite69†testnets L163:   2. /cite70†testnet-tuesdays L164:   3. /cite71†gameday01 L165: 
+L166: /
+L167: 
+L168: # README.md
+L169: 
+L170: Copy path
+L171: 
+L172: Top
+L173: ## File metadata and controls
+L174: 
+L175:   * Preview
+L176: 
+L177:   * Code
+L178: 
+L179:   * Blame
+L180: 
+L181: 107 lines (70 loc) · 4.05 KB
+L182: 
+L183: cite72†Raw L184: 
+L185: Copy raw file
+L186: 
+L187: Download raw file
+L188: 
+L189: Outline
+L190: 
+L191: Edit and raw actions
+L192: # Testnet Game Day # 1: 2024-Jan-24
+L193: 
+L194: For our first-ever game day, we will experiment with how we respond to changes during software upgrades. We will post announcements in the `testnet-announcements` channel in Discord to coordinate activities during the event.
+L195: 
+L196:   * Start time: `2024-01-24 14:30 UTC`
+L197:   * Estimated end time: `2024-01-24 15:30 UTC`
+L198: ## Recap
+L199: 
+L200:   * 39 validators participated
+L201:   * The event runtime was exactly 1 hour
+L202:   * Two software upgrades were scheduled
+L203:     * One upgrade was canceled via governance with a `cancel-software-upgrade` proposal
+L204:     * One upgrade was skipped via the `unsafe-skip-upgrades` flag
+L205: ### Lessons learned & findings
+L206:   * Votes for past proposals can be obtained by querying a block height when the proposal was still active.
+L207:     * REST API: `curl “<API URL>/cosmos/gov/v1beta1/proposals/<proposal id>/votes?pagination.limit=1000” -H “x-cosmos-block-height:<height>”`
+L208:     * Gaia CLI: `gaiad q gov votes <proposal id> --height <height>`
+L209:   * The `--unsafe-skip-upgrades <block height>` flag can be seen as a last-resort mechanism for skipping an upgrade that is deemed unacceptable, but coordination is critical to make sure the chain does not halt when the upgrade height is reached.
+L210:   * A cite73†Cosmovisor bug was found and reported by a validator when attempting to use the `add-upgrade` command.
+L211: ## Tasks
+L212: 
+L213:   * cite74†Task 1 : Vote YES on software upgrade proposal
+L214:   * cite75†Task 2 : Vote YES on cancel upgrade proposal
+L215:   * cite76†Task 3 : Vote YES on software upgrade proposal
+L216:   * cite77†Task 4 : Skip upgrade
+L217: ## Testnet Incentives Program (TIP) Eligibility
+L218: 
+L219:   * Once your `gameday01` validator is running, send a tx from your provider wallet to `cosmos15vnglkkrgwp454rsjka6gtlnh9kp50dxgmdw34` in the `provider` chain with the `gameday01` cosmovaloper address in the memo. This is required for tracking TIP eligibility.
+L220: ## Testnet Details
+L221: 
+L222:   * Chain-ID: `gameday01`
+L223:   * Launch date: 2024-01-22
+L224:   * Current Gaia Version: `v13.0.2`
+L225:   * Genesis File: cite78†genesis.json L226:   * Genesis sha256sum: Verify with `shasum -a 256 genesis.json`: `110d827d493bc9bac6b103806b1c1e51ac8c98560596afd3571557d0dd94f173`
+L227: ### Endpoints
+L228: 
+L229: RPC endpoints
+L230: 
+L231:   * cite79†https://rpc.gameday01.rs-testnet.polypore.xyz:443†rpc.gameday01.rs-testnet.polypore.xyz L232: 
+L233: Seeds
+L234: 
+L235:   * [REDACTED_EMAIL]:26656
+L236: 
+L237: State sync servers
+L238: 
+L239:   * cite80†http://gameday01-sync.rs-testnet.polypore.xyz:26657†gameday01-sync.rs-testnet.polypore.xyz L240: 
+L241: ### Block Explorers
+L242: 
+L243:   * cite81†https://explorer.rs-testnet.polypore.xyz/gameday01†explorer.rs-testnet.polypore.xyz L244: ### Faucet
+L245: 
+L246:   * cite82†https://gameday01-faucet.rs-testnet.polypore.xyz†gameday01-faucet.rs-testnet.polypore.xyz L247: 
+L248: ## How to Join
+L249: 
+L250:   * ⚠️ Do NOT use your `provider` chain keys. Never reuse keys!
+L251: ### Bash Script
+L252: 
+L253: Run either one of the scripts provided in this repo to join the provider chain:
+L254: 
+L255:   * `join-gameday01.sh` will create a `gaiad` service.
+L256:   * `join-gameday01-cv.sh` will create a `cosmovisor` service.
+L257:   * Both scripts must be run either as root or from a sudoer account.
+L258:   * Both scripts will attempt to download the amd64 binary from the Gaia cite83†releases page. You can modify the `CHAIN_BINARY_URL` to match your target architecture if needed.
+L259: ### Creating a Validator
+L260: 
+L261: Once you have some tokens in your self-delegation account, you can submit the `create-validator` transaction.
+L262: Submit the `create-validator` transaction.
+L263: 
+L264:     gaiad tx staking create-validator \
+L265:     --amount 1000000uatom \
+L266:     --pubkey "$(gaiad tendermint show-validator)" \
+L267:     --moniker <your moniker> \
+L268:     --chain-id gameday01 \
+L269:     --commission-rate 0.10 \
+L270:     --commission-max-rate 1.00 \
+L271:     --commission-max-change-rate 0.1 \
+L272:     --gas auto \
+L273:     --gas-adjustment 1.4 \
+L274:     --gas-prices 0.005uatom \
+L275:     --from <self-delegation-account>
+L276: You can verify the validator was created in the cite84†block explorer†explorer.rs-testnet.polypore.xyz , or in the command line:
+L277: 
+L278:     `gaiad q staking validators -o json | jq '.validators[].description.moniker'
+L279:     `
+L280: 
+L281: You can’t perform that action at this time.

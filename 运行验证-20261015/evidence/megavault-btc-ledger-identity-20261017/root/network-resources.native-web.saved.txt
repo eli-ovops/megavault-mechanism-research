@@ -1,0 +1,238 @@
+Resources – dYdX Documentation (https://docs.dydx.exchange/infrastructure_providers-network/resources)
+citeturn619view0 [wordlim: 200] Crawled: 3 weeks ago; Content type: text/html; Source: click({"ref_id":"turn618view0","id":30}); Redirected to URL: https://docs.dydx.xyz/nodes/resources; Total lines: 264
+L0: cite0†Skip to content L1: 
+L2: Guide
+L3: 
+L4: API
+L5: 
+L6: Concepts
+L7: 
+L8: Nodes
+L9: 
+L10: Running Your Node
+L11: 
+L12: cite1†Hardware Requirements cite2†Required Node Configs cite3†Setup cite4†Optimize cite5†Running a Validator cite6†Snapshots cite7†Peering with Gateway cite8†Voting L13: 
+L14: cite9†Node Streaming L15: 
+L16: Upgrades
+L17: 
+L18: cite10†Network Constants cite11†Resources L19: 
+L20: Policies
+L21: 
+L22: Search...
+L23: 
+L24: Menu
+L25: 
+L26: Resources
+L27: 
+L28: On this page
+L29: 
+L30: #
+L31: 
+L32: Resources
+L33: ##
+L34: 
+L35: `networks` Repositories
+L36: 
+L37: mainnet: cite12†https://github.com/dydxopsdao/networks/tree/main/dydx-mainnet-1†github.com L38: 
+L39: testnet: cite13†https://github.com/dydxprotocol/v4-testnets/tree/main/dydx-testnet-4†github.com L40: ##
+L41: 
+L42: Upgrades History
+L43: mainnet
+L44: Block Height  | Proposal  | Compatible Versions  | Comments
+L45: --- | --- | --- | ---
+L46: 1 ~ 1,805,000  | N/A  | cite14†v2.0.1†github.com L47: cite15†v1.0.1†github.com L48: cite16†v1.0.0†github.com | `v1.0.1` was a rolling upgrade;
+L49: `v2.0.1` was backported to enable easier syncing from block 1
+L50: 1,805,001 ~ 7,147,831  | N/A  | cite14†v2.0.1†github.com L51: cite17†v2.0.0†github.com | `v2.0.0` was an emergency fix
+L52: 7,147,832 ~ 12,791,711  | 7  | cite18†v3.0.2†github.com L53: cite19†v3.0.0†github.com | `v3.0.2` allows easier syncing from block 1
+L54: 12,791,712 ~ 14,404,199  | 46  | cite20†v4.0.5†github.com |
+L55: 14,404,200 ~ 17,559,999  | 53  | cite21†v4.1.2†github.com L56: cite22†v4.1.0†github.com | `v4.1.2` adds performance improvements
+L57: 17,560,000 ~ 21,141,999  | 59  | cite23†v5.0.6†github.com L58: cite24†v5.0.4†github.com L59: cite25†v5.0.0†github.com | `v5.0.4` adds performance improvements
+L60: `v5.0.6` fixes a chain liveness issue
+L61: 21,142,000 ~ 22,169,999  | 125  | cite26†v5.1.0†github.com |
+L62: 22,170,000 ~ 26,784,999  | 130  | cite27†v5.2.0†github.com |
+L63: 26,785,000 ~ 29,949,999  | 160  | cite28†v6.0.4†github.com L64: cite29†v6.0.9†github.com L65:  | `v6.0.9` a Comet Security patch
+L66: `v6.0.4` Integrates and adds Marketmap functionality, expands transaction sequence number validation to accept timestamp nonces, and introduces individual vault parameters.
+L67: 29,950,000 ~ 35,601,999  | 173  | cite30†v7.0.1†github.com | `v7.0.1`
+L68:   * MegaVault
+L69:   * Permissionless / Instant Market Listing
+L70:   * Affiliates Program
+L71:   * Optimistic Execution
+L72:   * Comet Security patch
+L73: 35,602,000 ~ 48,979,999  | 200  | cite31†v8.0.5†github.com L74: cite32†v8.0.1†github.com L75:  | `v8.0.5` Addresses ASA-2025-001 and ASA-2025-002
+L76: `v8.0.1` changes in Permissioned Keys, Marketmap Removals
+L77: 48,980,000 ~ 50,240,950  | 257  | cite33†v8.1.0†github.com | `v8.1.0`
+L78:   * Builder Codes
+L79:   * Clob Transaction Batching
+L80:   * Cross Instant Market Listings
+L81:   * IML_5x liquidity tier
+L82: 50,240,951 ~ 54,449,999  | 261  | cite34†v8.2.0†github.com | `v8.2.0` Addresses ISA-2025-005
+L83: 54,450,000 ~ 56,529,999  | 271  | cite35†v9.0.0†github.com | `v9.0.0`
+L84:   * TWAP Orders
+L85:   * Order Router Revenue Sharing
+L86:   * Proposer Set Reduction
+L87: 56,530,000 ~ 58,492,678  | 283  | cite36†v9.1.0†github.com | `v9.1.0` Fixes validator set hash computation to match standard CometBFT
+L88: 58,492,679 ~ 59,834,999  | N/A  | cite37†v9.2.0†github.com L89: cite38†9.2.1†github.com L90:  | `v9.2.0` The chain expereinced a halt at height 58,492,678 and needed emergency patching
+L91: `v9.2.1` applies a Cosmos-SDK security patch
+L92: 59,835,000 ~ 62,249,999  | 303  | cite39†v9.3.0†github.com | `v9.3.0` Permanent fix for the chain halt at height 58,492,678
+L93: 62,250,000 ~ 66,629,999  | 303  | cite40†v9.4.0†github.com | `v9.4.0` Leverage enforcement, staking-based fee tiers, and refined affiliate rewards
+L94: 66,630,000 ~ 73,859,999  | 323  | cite41†v9.5.0†github.com | `v9.5.0` Governance-controlled transfer mechanism, epoch querying commands, and short block window parameter adjustments
+L95: 73,860,000 ~ 105,001,999  | 342  | cite42†v9.6.4†github.com L96: cite43†v9.6.3†github.com L97: cite44†v9.6.2†github.com L98: cite45†v9.6.1†github.com L99: cite46†v9.6.0†github.com | `v9.6.0` Governance controls for perpetual market step and tick sizes
+L100: `v9.6.1` Dependency bumps for security fixes
+L101: `v9.6.2` Case-insensitive ticker handling in `x/listing` and `x/prices`
+L102: `v9.6.3` Cosmos SDK and CometBFT bumps for the height poisoning fix
+L103: `v9.6.4` SEC-76 security fixes
+L104: 105,002,000 ~  | 395  | cite47†v9.7.0†github.com | `v9.7.0` Removes `MsgSendFromAccountToAccount`, restricts `MsgSendFromModuleToAccount` sources, and sweeps settled isolated markets' insurance funds back to the main Insurance Fund
+L105: testnet
+L106: Block Height  | Proposal  | Compatible Versions  | Comments
+L107: --- | --- | --- | ---
+L108: 1 ~ 4,999,999  | N/A  | cite14†v2.0.1†github.com L109: cite17†v2.0.0†github.com L110: cite15†v1.0.1†github.com L111: cite16†v1.0.0†github.com | The chain was never upgraded to `v2.0.0`
+L112: 5,000,000 ~ 6,879,999  | 18  | cite18†v3.0.2†github.com L113: cite19†v3.0.0†github.com L114:  |
+L115: 6,880,000 ~ 10,449,999  | 45  | cite20†v4.0.5†github.com |
+L116: 10,450,000 ~ 12,071,999  | 73  | cite22†v4.1.0†github.com |
+L117: 12,072,000 ~ 16,291,699  | 82  | cite25†v5.0.0†github.com |
+L118: 16,291,700 ~ 17,706,999  | 110  | cite26†v5.1.0†github.com |
+L119: 17,707,000 ~ 19,487,299  | 113  | cite27†v5.2.0†github.com |
+L120: 19,487,300 ~ 20,579,999  | 185  | cite48†v6.0.0†github.com |
+L121: 20,580,000 ~ 21,669,999  | 208  | cite49†v6.0.3-rc0†github.com |
+L122: 21,670,000 ~ 23,527,799  | 222  | cite50†v6.0.4-rc2†github.com |
+L123: 23,527,800 ~ 28,234,999  | 227  | cite51†v7.0.0†github.com |
+L124: 28,235,000 ~ 42,857,847  | 266  | cite52†v8.0.0†github.com |
+L125: 42,857,848 ~ 43,913,064  | 307  | cite33†v8.1.0†github.com |
+L126: 43,913,065 ~ 46,589,845  | 310  | cite34†v8.2.0†github.com |
+L127: 46,589,846 ~ 49,045,932  | 313  | cite35†v9.0.0†github.com |
+L128: 49,045,933 ~ 51,610,520  | 337  | cite36†v9.1.0†github.com |
+L129: 51,610,521 ~ 52,967,285  | 342  | cite39†v9.3.0†github.com |
+L130: 52,967,286 ~ 56,861,499  | 345  | cite40†v9.4.0†github.com |
+L131: 56,861,500 ~ 60,703,999  | 360  | cite41†v9.5.0†github.com |
+L132: 60,704,000 ~  | 368  | cite46†v9.6.0†github.com |
+L133: ##
+L134: 
+L135: Seed Nodes
+L136: mainnet
+L137: Team  | URI
+L138: --- | ---
+L139: Polkachu  | `cite53†[email protected] :23856`
+L140: KingNodes  | `cite53†[email protected] :23856`
+L141: Enigma  | `[REDACTED_EMAIL]:1490`
+L142: CryptoCrew  | `[REDACTED_EMAIL]:26401`
+L143: testnet
+L144: Team  | URI
+L145: --- | ---
+L146: AllThatNode  | `[REDACTED_EMAIL]:26656`
+L147: Crosnest:  | `[REDACTED_EMAIL]:26656`
+L148: CryptoCrew:  | `[REDACTED_EMAIL]:29104`
+L149: ##
+L150: 
+L151: Indexer Endpoints
+L152: 
+L153: See cite54†Endpoints .
+L154: ##
+L155: 
+L156: State Sync Nodes
+L157: mainnet
+L158: Team  | State Sync Peers  | Region
+L159: --- | --- | ---
+L160: Polkachu  | `cite53†[email protected] :23856`
+L161:  | Germany
+L162: Polkachu  | `cite53†[email protected] :23856`
+L163:  | Finland
+L164: Polkachu  | `cite53†[email protected] :23856`
+L165:  | Japan
+L166: KingNodes  | `cite53†[email protected] :238566`
+L167:  | APAC
+L168: KingNodes  | `cite53†[email protected] :23856`
+L169:  | EU
+L170: Enigma  | `cite53†[email protected] :1490`
+L171:  | Finland
+L172: Enigma  | `cite53†[email protected] :1490`
+L173:  | Germany
+L174: Enigma  | `cite53†[email protected] :1490`
+L175:  | Japan
+L176: testnet
+L177: Team  | State Sync Peers
+L178: --- | ---
+L179: Polkachu  | `cite53†[email protected] :23856`
+L180: ##
+L181: 
+L182: Snapshot Service
+L183: 
+L184: mainnet
+L185: Team  | URI  | Pruning  | Index
+L186: --- | --- | --- | ---
+L187: Polkachu  | `https://polkachu.com/tendermint_snapshots/dydx`  | Yes  | null
+L188: KingNodes  | `https://snapshots.kingnodes.com/network/dydx`  | No  | kv
+L189: Enigma  | `https://enigma-validator.com/networks?asset=dydx#networkservices`  | Yes  |
+L190: testnet
+L191: Team  | URI  | Pruning  | Index
+L192: --- | --- | --- | ---
+L193: Polkachu  | `https://www.polkachu.com/testnets/dydx/snapshots`  | Yes  | null
+L194: ##
+L195: 
+L196: Live Peer Node Providers
+L197: 
+L198: mainnet
+L199: Team  | URI
+L200: --- | ---
+L201: Polkachu  | `https://polkachu.com/live_peers/dydx`
+L202: 
+L203: ##
+L204: 
+L205: Address Book Providers
+L206: 
+L207: mainnet
+L208: Team  | URI
+L209: --- | ---
+L210: Polkachu  | `https://polkachu.com/addrbooks/dydx`
+L211: 
+L212: ##
+L213: 
+L214: Full Node Endpoints
+L215: 
+L216: See cite55†Endpoints .
+L217: ##
+L218: 
+L219: Archival Node Endpoints
+L220: mainnetRPC
+L221: Team  | URI  | Rate limit
+L222: --- | --- | ---
+L223: Polkachu  | `https://dydx-dao-archive-rpc.polkachu.com:443`  | 300 req/m
+L224: KingNodes  | `https://dydx-ops-archive-rpc.kingnodes.com:443`  | 50 req/m
+L225: Enigma  | `https://dydx-dao-rpc-archive.enigma-validator.com:443`  |
+L226: REST
+L227: Team  | URI  | Rate limit
+L228: --- | --- | ---
+L229: Polkachu  | `https://dydx-dao-archive-api.polkachu.com:443`  | 300 req/m
+L230: KingNodes  | `https://dydx-ops-archive-rest.kingnodes.com:443`  | 50 req/m
+L231: Enigma  | `https://dydx-dao-lcd-archive.enigma-validator.com:443`  |
+L232: gRPC
+L233: Team  | URI  | Rate limit
+L234: --- | --- | ---
+L235: Polkachu  | `https://dydx-dao-archive-grpc-1.polkachu.com:443`
+L236: `https://dydx-dao-archive-grpc-2.polkachu.com:443`  | 300 req/m
+L237: KingNodes  | `https://dydx-ops-archive-grpc.kingnodes.com:443`  | 50 req/m
+L238: Enigma  | `https://dydx-dao-grpc-archive.enigma-validator.com:1492`  |
+L239: testnet
+L240: No Archival Nodes.
+L241: ##
+L242: 
+L243: Other Links
+L244: mainnet
+L245: Name  | URI
+L246: --- | ---
+L247: dYdX Chain Web Frontend  | `https://dydx.trade/`
+L248: Status Page  | `https://status.dydx.trade`
+L249: Mintscan  | `https://www.mintscan.io/dydx`
+L250: Keplr  | `https://wallet.keplr.app/chains/dydx`
+L251: Validator Metrics  | `https://p.ap1.datadoghq.com/sb/610e1836-51dd-11ee-a995-da7ad0900009-78607847ff8632d8a96737ed3437f40c`
+L252: #validators Discord Channel  | `https://discord.com/channels/724804754382782534/1029585380170805379`
+L253: FE Bug Report Form  | `https://www.dydxopsdao.com/feedback`
+L254: testnet
+L255: Name  | URI
+L256: --- | ---
+L257: Public Testnet Front End  | `https://v4.testnet.dydx.exchange`
+L258: Status Page  | `https://status.v4testnet.dydx.exchange`
+L259: Mintscan  | `https://www.mintscan.io/dydx-testnet`
+L260: Keplr  | `https://testnet.keplr.app/chains/dydx-testnet`
+L261: Validator Metrics  | `https://p.datadoghq.com/sb/dc160ddf0-05a98d2dbe2a01d8caa5783eb616f826`
+L262: Discord Channel (Feedback)  | `https://discord.com/channels/724804754382782534/1117897181886677012`
+L263: Google Form (Feedback)  | `https://docs.google.com/forms/d/e/1FAIpQLSezLsWCKvAYDEb7L-2O4wOON1T56xxro9A2Azvl6IxXHP_15Q/viewform`

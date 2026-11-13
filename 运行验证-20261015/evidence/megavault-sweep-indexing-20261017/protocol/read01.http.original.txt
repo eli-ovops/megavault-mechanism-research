@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Length: 2571
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Oct 2026 18:01:30 GMT
+Etag: "2670321b2f0031d7db268c090eedb84861207ce5"
+Last-Modified: Sat, 05 Sep 2026 06:26:27 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: 2E86:3A8925:9D8F4D:F3F79F:6AD26679
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4987
+X-Ratelimit-Reset: 1792176630
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 13
+X-Xss-Protection: 0
+
+{"name":"abci.go","path":"protocol/x/vault/abci.go","sha":"2670321b2f0031d7db268c090eedb84861207ce5","size":1097,"url":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/protocol/x/vault/abci.go?ref=67a3c71670c460ef92ffb15930dda7047a901f64","html_url":"https://github.com/dydxprotocol/v4-chain/blob/67a3c71670c460ef92ffb15930dda7047a901f64/protocol/x/vault/abci.go","git_url":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/2670321b2f0031d7db268c090eedb84861207ce5","download_url":"https://raw.githubusercontent.com/dydxprotocol/v4-chain/67a3c71670c460ef92ffb15930dda7047a901f64/protocol/x/vault/abci.go","type":"file","content":"cGFja2FnZSB2YXVsdAoKaW1wb3J0ICgKCSJydW50aW1lL2RlYnVnIgoKCXNk\nayAiZ2l0aHViLmNvbS9jb3Ntb3MvY29zbW9zLXNkay90eXBlcyIKCSJnaXRo\ndWIuY29tL2R5ZHhwcm90b2NvbC92NC1jaGFpbi9wcm90b2NvbC9saWIvYWJj\naSIKCSJnaXRodWIuY29tL2R5ZHhwcm90b2NvbC92NC1jaGFpbi9wcm90b2Nv\nbC9saWIvbG9nIgoJImdpdGh1Yi5jb20vZHlkeHByb3RvY29sL3Y0LWNoYWlu\nL3Byb3RvY29sL3gvdmF1bHQva2VlcGVyIgopCgpmdW5jIEJlZ2luQmxvY2tl\ncigKCWN0eCBzZGsuQ29udGV4dCwKCWtlZXBlciAqa2VlcGVyLktlZXBlciwK\nKSB7CgkvLyBQYW5pYyBpcyBub3QgZXhwZWN0ZWQgaW4gQmVnaW5CbG9ja2Vy\nLCBidXQgd2Ugc2hvdWxkIHJlY292ZXIgaW5zdGVhZCBvZgoJLy8gaGFsdGlu\nZyB0aGUgY2hhaW4uCglpZiBlcnIgOj0gYWJjaS5SdW5DYWNoZWQoY3R4LCBm\ndW5jKGN0eCBzZGsuQ29udGV4dCkgZXJyb3IgewoJCWtlZXBlci5EZWNvbW1p\nc3Npb25Ob25Qb3NpdGl2ZUVxdWl0eVZhdWx0cyhjdHgpCgkJcmV0dXJuIG5p\nbAoJfSk7IGVyciAhPSBuaWwgewoJCWxvZy5FcnJvckxvZygKCQkJY3R4LAoJ\nCQkicGFuaWMgaW4gdmF1bHQgQmVnaW5CbG9ja2VyIiwKCQkJInN0YWNrIiwK\nCQkJc3RyaW5nKGRlYnVnLlN0YWNrKCkpLAoJCSkKCX0KfQoKZnVuYyBFbmRC\nbG9ja2VyKAoJY3R4IHNkay5Db250ZXh0LAoJa2VlcGVyICprZWVwZXIuS2Vl\ncGVyLAopIHsKCS8vIFBhbmljIGlzIG5vdCBleHBlY3RlZCBpbiBFbmRCbG9j\na2VyLCBidXQgd2Ugc2hvdWxkIHJlY292ZXIgaW5zdGVhZCBvZgoJLy8gaGFs\ndGluZyB0aGUgY2hhaW4uCglpZiBlcnIgOj0gYWJjaS5SdW5DYWNoZWQoY3R4\nLCBmdW5jKGN0eCBzZGsuQ29udGV4dCkgZXJyb3IgewoJCWtlZXBlci5SZWZy\nZXNoQWxsVmF1bHRPcmRlcnMoY3R4KQoJCWtlZXBlci5Td2VlcE1haW5WYXVs\ndEJhbmtCYWxhbmNlKGN0eCkKCQlyZXR1cm4gbmlsCgl9KTsgZXJyICE9IG5p\nbCB7CgkJbG9nLkVycm9yTG9nKAoJCQljdHgsCgkJCSJwYW5pYyBpbiB2YXVs\ndCBFbmRCbG9ja2VyIiwKCQkJInN0YWNrIiwKCQkJc3RyaW5nKGRlYnVnLlN0\nYWNrKCkpLAoJCSkKCX0KfQo=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/protocol/x/vault/abci.go?ref=67a3c71670c460ef92ffb15930dda7047a901f64","git":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/2670321b2f0031d7db268c090eedb84861207ce5","html":"https://github.com/dydxprotocol/v4-chain/blob/67a3c71670c460ef92ffb15930dda7047a901f64/protocol/x/vault/abci.go"}}

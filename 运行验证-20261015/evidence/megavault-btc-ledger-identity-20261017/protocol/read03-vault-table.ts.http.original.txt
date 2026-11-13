@@ -1,0 +1,31 @@
+HTTP/2.0 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+Cache-Control: private, max-age=60, s-maxage=60
+Content-Length: 4166
+Content-Security-Policy: default-src 'none'
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Oct 2026 17:18:42 GMT
+Etag: "4cfe9b6ca8bc23342fed1c24e256aed9624ce2fd"
+Last-Modified: Thu, 15 Oct 2026 21:01:59 GMT
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Server: github.com
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With
+X-Accepted-Oauth-Scopes: repo
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-Github-Api-Version-Selected: 2022-11-28
+X-Github-Edge-Region: japaneast
+X-Github-Media-Type: github.v3; format=json
+X-Github-Request-Id: 1B38:339E1A:997053:ED6312:6AD25C72
+X-Oauth-Client-Id: 178c6fc778ccc68e1d6a
+X-Oauth-Scopes: gist, read:org, repo, workflow
+X-Ratelimit-Limit: 5000
+X-Ratelimit-Remaining: 4945
+X-Ratelimit-Reset: 1792172979
+X-Ratelimit-Resource: core
+X-Ratelimit-Used: 55
+X-Xss-Protection: 0
+
+{"name":"vault-table.ts","path":"indexer/packages/postgres/src/stores/vault-table.ts","sha":"4cfe9b6ca8bc23342fed1c24e256aed9624ce2fd","size":2132,"url":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/indexer/packages/postgres/src/stores/vault-table.ts?ref=50d70ca0f151a6a40f9fa62438d6d85b583d710c","html_url":"https://github.com/dydxprotocol/v4-chain/blob/50d70ca0f151a6a40f9fa62438d6d85b583d710c/indexer/packages/postgres/src/stores/vault-table.ts","git_url":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/4cfe9b6ca8bc23342fed1c24e256aed9624ce2fd","download_url":"https://raw.githubusercontent.com/dydxprotocol/v4-chain/50d70ca0f151a6a40f9fa62438d6d85b583d710c/indexer/packages/postgres/src/stores/vault-table.ts","type":"file","content":"aW1wb3J0IHsgUXVlcnlCdWlsZGVyIH0gZnJvbSAnb2JqZWN0aW9uJzsKCmlt\ncG9ydCB7IERFRkFVTFRfUE9TVEdSRVNfT1BUSU9OUyB9IGZyb20gJy4uL2Nv\nbnN0YW50cyc7CmltcG9ydCB7CiAgdmVyaWZ5QWxsUmVxdWlyZWRGaWVsZHMs\nCiAgc2V0dXBCYXNlUXVlcnksCn0gZnJvbSAnLi4vaGVscGVycy9zdG9yZXMt\naGVscGVycyc7CmltcG9ydCBUcmFuc2FjdGlvbiBmcm9tICcuLi9oZWxwZXJz\nL3RyYW5zYWN0aW9uJzsKaW1wb3J0IFZhdWx0TW9kZWwgZnJvbSAnLi4vbW9k\nZWxzL3ZhdWx0LW1vZGVsJzsKaW1wb3J0IHsKICBRdWVyeUNvbmZpZywKICBW\nYXVsdFF1ZXJ5Q29uZmlnLAogIFZhdWx0Q29sdW1ucywKICBPcHRpb25zLAog\nIE9yZGVyaW5nLAogIFF1ZXJ5YWJsZUZpZWxkLAogIFZhdWx0RnJvbURhdGFi\nYXNlLAogIFZhdWx0Q3JlYXRlT2JqZWN0LAp9IGZyb20gJy4uL3R5cGVzJzsK\nCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBmaW5kQWxsKAogIHsKICAgIGFkZHJl\nc3MsCiAgICBjbG9iUGFpcklkLAogICAgc3RhdHVzLAogICAgbGltaXQsCiAg\nfTogVmF1bHRRdWVyeUNvbmZpZywKICByZXF1aXJlZEZpZWxkczogUXVlcnlh\nYmxlRmllbGRbXSwKICBvcHRpb25zOiBPcHRpb25zID0gREVGQVVMVF9QT1NU\nR1JFU19PUFRJT05TLAopOiBQcm9taXNlPFZhdWx0RnJvbURhdGFiYXNlW10+\nIHsKICB2ZXJpZnlBbGxSZXF1aXJlZEZpZWxkcygKICAgIHsKICAgICAgYWRk\ncmVzcywKICAgICAgY2xvYlBhaXJJZCwKICAgICAgc3RhdHVzLAogICAgICBs\naW1pdCwKICAgIH0gYXMgUXVlcnlDb25maWcsCiAgICByZXF1aXJlZEZpZWxk\ncywKICApOwoKICBsZXQgYmFzZVF1ZXJ5OiBRdWVyeUJ1aWxkZXI8VmF1bHRN\nb2RlbD4gPSBzZXR1cEJhc2VRdWVyeTxWYXVsdE1vZGVsPigKICAgIFZhdWx0\nTW9kZWwsCiAgICBvcHRpb25zLAogICk7CgogIGlmIChhZGRyZXNzKSB7CiAg\nICBiYXNlUXVlcnkgPSBiYXNlUXVlcnkud2hlcmVJbihWYXVsdENvbHVtbnMu\nYWRkcmVzcywgYWRkcmVzcyk7CiAgfQoKICBpZiAoY2xvYlBhaXJJZCkgewog\nICAgYmFzZVF1ZXJ5ID0gYmFzZVF1ZXJ5LndoZXJlSW4oVmF1bHRDb2x1bW5z\nLmNsb2JQYWlySWQsIGNsb2JQYWlySWQpOwogIH0KCiAgaWYgKHN0YXR1cykg\newogICAgYmFzZVF1ZXJ5ID0gYmFzZVF1ZXJ5LndoZXJlSW4oVmF1bHRDb2x1\nbW5zLnN0YXR1cywgc3RhdHVzKTsKICB9CgogIGlmIChvcHRpb25zLm9yZGVy\nQnkgIT09IHVuZGVmaW5lZCkgewogICAgZm9yIChjb25zdCBbY29sdW1uLCBv\ncmRlcl0gb2Ygb3B0aW9ucy5vcmRlckJ5KSB7CiAgICAgIGJhc2VRdWVyeSA9\nIGJhc2VRdWVyeS5vcmRlckJ5KAogICAgICAgIGNvbHVtbiwKICAgICAgICBv\ncmRlciwKICAgICAgKTsKICAgIH0KICB9IGVsc2UgewogICAgYmFzZVF1ZXJ5\nID0gYmFzZVF1ZXJ5Lm9yZGVyQnkoCiAgICAgIFZhdWx0Q29sdW1ucy5jbG9i\nUGFpcklkLAogICAgICBPcmRlcmluZy5BU0MsCiAgICApOwogIH0KCiAgaWYg\nKGxpbWl0KSB7CiAgICBiYXNlUXVlcnkgPSBiYXNlUXVlcnkubGltaXQobGlt\naXQpOwogIH0KCiAgcmV0dXJuIGJhc2VRdWVyeS5yZXR1cm5pbmcoJyonKTsK\nfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGNyZWF0ZSgKICB2YXVsdFRvQ3Jl\nYXRlOiBWYXVsdENyZWF0ZU9iamVjdCwKICBvcHRpb25zOiBPcHRpb25zID0g\neyB0eElkOiB1bmRlZmluZWQgfSwKKTogUHJvbWlzZTxWYXVsdEZyb21EYXRh\nYmFzZT4gewogIHJldHVybiBWYXVsdE1vZGVsLnF1ZXJ5KAogICAgVHJhbnNh\nY3Rpb24uZ2V0KG9wdGlvbnMudHhJZCksCiAgKS5pbnNlcnQoewogICAgLi4u\ndmF1bHRUb0NyZWF0ZSwKICB9KTsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9u\nIHVwc2VydCgKICB2YXVsdFRvVXBzZXJ0OiBWYXVsdENyZWF0ZU9iamVjdCwK\nICBvcHRpb25zOiBPcHRpb25zID0geyB0eElkOiB1bmRlZmluZWQgfSwKKTog\nUHJvbWlzZTxWYXVsdEZyb21EYXRhYmFzZT4gewogIGNvbnN0IHZhdWx0czog\nVmF1bHRNb2RlbFtdID0gYXdhaXQgVmF1bHRNb2RlbC5xdWVyeSgKICAgIFRy\nYW5zYWN0aW9uLmdldChvcHRpb25zLnR4SWQpLAogICkudXBzZXJ0KHsKICAg\nIC4uLnZhdWx0VG9VcHNlcnQsCiAgfSkucmV0dXJuaW5nKCcqJyk7CiAgcmV0\ndXJuIHZhdWx0c1swXTsKfQo=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/dydxprotocol/v4-chain/contents/indexer/packages/postgres/src/stores/vault-table.ts?ref=50d70ca0f151a6a40f9fa62438d6d85b583d710c","git":"https://api.github.com/repos/dydxprotocol/v4-chain/git/blobs/4cfe9b6ca8bc23342fed1c24e256aed9624ce2fd","html":"https://github.com/dydxprotocol/v4-chain/blob/50d70ca0f151a6a40f9fa62438d6d85b583d710c/indexer/packages/postgres/src/stores/vault-table.ts"}}

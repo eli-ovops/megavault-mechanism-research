@@ -1,0 +1,841 @@
+MegaVault | dYdX (https://docs.dydx.community/dydx/dydx-features/megavault)
+citeturn615search0 [wordlim: 200] Crawled: 7 months ago; MegaVault has no track record, and any historical performance is not indicative of future performance or actual results.
+
+# 🗝️MegaVault
+
+Image
+
+MegaVault is a user-facing feature that enables dYdX users to add USDC to provide liquidity to various markets, and earn yield in return. By aggregating liquidity from users, MegaVault ensures that every market maintains the necessary liquidity for smooth and efficient trading.
+
+## 
+
+Vault Mechanics
+
+At a technical level, MegaVault will operate multiple “sub-vaults.” A sub-vault uses users' USDC to run an automated market-making strategy for a given market. Users' USDC is allocated to these sub-vaults, and the yield they generate is aggregated and distributed to users who added USDC to MegaVault.
+
+## 
+
+Adding and Removing Funds
+
+Users can add funds into MegaVault at any time and start earning yield immediately. At a high level, users can think of adding funds as owning a percentage of the vault’s net equity (i.e., the vault’s USDC and position values).
+
+Except in the case of Instant Market Listings, users will be able to remove funds from MegaVault at any time after adding them, though they may experience slippage based on MegaVault’s status, positions, and market conditions.
+## 
+
+FAQ
+
+Where does MegaVault yield come from?
+
+Currently, MegaVault yield comes from profit & loss on vault positions, funding rate payments, and 50% trading fee revenue share (as approved by the dYdX community on November 15, 2024). This trading fee revenue share can be adjusted by dYdX community anytime via dYdX Chain governance.
+
+Will I receive the MegaVault APR shown in the front-end?
+
+The APR is an estimated representation of annualized returns based on past performance which fluctuates significantly. Increases in MegaVault TVL will likely lead to reductions in APR as more users share the protocol revenue received by MegaVault.
+
+For example, if protocol revenue is $10 and MegaVault has a TVL of $50, MegaVault's APR will be 20% `(10/50*100%)` . However, if the TVL increases to $100 and the $10 revenue remains unchanged, MegaVault's APR will reduce to 10% `(20/100*100%)`.
+
+The APR reflects MegaVault's past 30-day performance and is not an indicator of future performance. Performance is defined as PnL, protocol fees, and any other incentives provided by the community. MegaVault's performance depends on many factors that are outside of the protocol’s control. MegaVault has no track record, and any historical performance is not indicative of future performance or actual results.
+
+Megavault returns are also only paid out once funds are removed and are subject to slippage (discussed below), so actual returns over the period the funds are in MegaVault may vary significantly from the estimated APR shown at the time the funds were added.
+
+How is MegaVault APR calculated?
+
+The APR shown on the UI is calculated by taking MegaVault’s total returns over the past 30 days (or a lesser period if 30-day data is not available, such as the first month of MegaVault’s operation) and multiplying it by 365/30 (i.e., ~12) to estimate the yearly return. In the initial month of the MegaVault, for example, the APR will reflect returns during the few days the MegaVault has been operational, extrapolated to the next 12 months.
+
+The APR is calculated as follows:
+
+  1. If there is 30 days of data for MegaVault:
+--------------------------------------------------------------------------------
+dydx · ccxt/ccxt Wiki · GitHub (https://github.com/ccxt/ccxt/wiki/dydx)
+citeturn615search1 [wordlim: 200] Crawled: 3 weeks ago; `indexerGetVaultV1MegavaultHistoricalPnl`  | GET  | `vault/v1/megavault/historicalPnl`  | 1 ... `indexerGetTradeHistory`  | GET  | `tradeHistory`  | 1
+`indexerGetTransfersParentSubaccountNumber`  | GET  | `transfers/parentSubaccountNumber`  | 1
+`indexerGetVaultV1MegavaultHistoricalPnl`  | GET  | `vault/v1/megavault/historicalPnl`  | 1
+`indexerGetVaultV1MegavaultPositions`  | GET  | `vault/v1/megavault/positions`  | 1
+`indexerGetVaultV1VaultsHistoricalPnl`  | GET  | `vault/v1/vaults/historicalPnl`  | 1
+`indexerGetPerpetualMarketSparklines`  | GET  | `perpetualMarketSparklines`  | 1
+`indexerGetPerpetualMarketsTicker`  | GET  | `perpetualMarkets/{ticker}`  | 1
+`indexerGetPerpetualMarketsTickerOrderbook`  | GET  | `perpetualMarkets/{ticker}/orderbook`  | 1
+`indexerGetTradesPerpetualMarketTicker`  | GET  | `trades/perpetualMarket/{ticker}`  | 1
+`indexerGetHistoricalFundingTicker`  | GET  | `historicalFunding/{ticker}`  | 1
+`indexerGetCandlesTickerResolution`  | GET  | `candles/{ticker}/{resolution}`  | 1
+`indexerGetAddressesAddressSubaccounts`  | GET  | `addresses/{address}/subaccounts`  | 1
+`indexerGetAddressesAddressSubaccountNumberSubaccountNumberAssetPositions`  | GET  | `addresses/{address}/subaccountNumber/{subaccountNumber}/assetPositions`  | 1
+`indexerGetAddressesAddressSubaccountNumberSubaccountNumberPerpetualPositions`  | GET  | `addresses/{address}/subaccountNumber/{subaccountNumber}/perpetualPositions`  | 1
+`indexerGetAddressesAddressSubaccountNumberSubaccountNumberOrders`  | GET  | `addresses/{address}/subaccountNumber/{subaccountNumber}/orders`  | 1
+`indexerGetFillsParentSubaccount`  | GET  | `fills/parentSubaccount`  | 1
+`indexerGetHistoricalPnlParentSubaccount`  | GET  | `historical-pnl/parentSubaccount`  | 1
+`indexerGetPnl`  | GET  | `pnl`  | 1
+`indexerGetPnlParentSubaccountNumber`  | GET  | `pnl/parentSubaccountNumber`  | 1
+`indexerGetTradeHistory`  | GET  | `tradeHistory`  | 1
+`indexerGetTradeHistoryParentSubaccountNumber`  | GET  | `tradeHistory/parentSubaccountNumber`  | 1
+`indexerPostTurnkeySignin`  | POST  | `turnkey/signin`  | 1
+`indexerPostTurnkeyUploadAddress`  | POST  | `turnkey/uploadAddress`  | 1
+
+--------------------------------------------------------------------------------
+Swagger UI (https://indexer.dydx.trade/docs/)
+citeturn615search2 [wordlim: 200] Crawled: last week; ## Indexer API ... GET/tradeHistory ... GET/vault/v1/megavault/historicalPnl
+
+GET/historical-pnl
+
+GET/historical-pnl/parentSubaccountNumber
+
+GET/historicalTradingRewardAggregations/{address}
+
+GET/orderbooks/perpetualMarket/{ticker}
+
+GET/orders
+
+GET/orders/parentSubaccountNumber
+
+GET/orders/{orderId}
+
+GET/perpetualMarkets
+
+GET/perpetualPositions
+
+GET/perpetualPositions/parentSubaccountNumber
+
+GET/pnl
+
+GET/pnl/parentSubaccountNumber
+
+GET/trader/search
+
+GET/sparklines
+
+GET/time
+
+GET/tradeHistory
+
+GET/tradeHistory/parentSubaccountNumber
+
+GET/trades/perpetualMarket/{ticker}
+
+GET/transfers
+
+GET/transfers/parentSubaccountNumber
+
+GET/transfers/between
+
+POST/turnkey/uploadAddress
+
+POST/turnkey/signin
+
+POST/turnkey/appleLoginRedirect
+
+GET/vault/v1/megavault/historicalPnl
+
+GET/vault/v1/vaults/historicalPnl
+
+GET/vault/v1/megavault/positions
+
+#### Schemas
+
+PerpetualPositionStatus
+
+PositionSide
+
+IsoString
+
+PerpetualPositionResponseObject
+
+PerpetualPositionsMap
+
+AssetPositionResponseObject
+
+AssetPositionsMap
+
+SubaccountResponseObject
+
+AddressResponse
+
+ParentSubaccountResponse
+
+AffiliateMetadataResponse
+
+AffiliateAddressResponse
+
+CreateReferralCodeResponse
+
+AffiliateSnapshotResponseObject
+
+AffiliateSnapshotResponse
+
+AffiliateTotalVolumeResponse
+
+AssetPositionResponse
+
+CandleResolution
+
+CandleResponseObject
+
+CandleResponse
+
+ComplianceResponse
+
+ComplianceStatus
+
+ComplianceReason
+
+ComplianceV2Response
+
+OrderSide
+
+Liquidity
+
+FillType
+
+MarketType
+
+FillResponseObject
+
+FillResponse
+
+FundingPaymentResponseObject
+
+FundingPaymentResponse
+
+HeightResponse
+
+HistoricalBlockTradingReward
+
+HistoricalBlockTradingRewardsResponse
+
+HistoricalFundingResponseObject
+
+HistoricalFundingResponse
+
+PnlTicksResponseObject
+
+HistoricalPnlResponse
+
+TradingRewardAggregationPeriod
+
+HistoricalTradingRewardAggregation
+
+HistoricalTradingRewardAggregationsResponse
+
+OrderbookResponsePriceLevel
+
+OrderbookResponseObject
+
+APITimeInForce
+
+OrderStatus
+
+BestEffortOpenedStatus
+
+APIOrderStatus
+
+OrderType
+
+OrderResponseObject
+
+PerpetualMarketStatus
+
+PerpetualMarketType
+
+PerpetualMarketResponseObject
+
+PerpetualMarketResponse
+
+PerpetualPositionResponse
+
+PnlResponseObject
+
+PnlResponse
+
+TraderSearchResponseObject
+
+TraderSearchResponse
+
+SparklineResponseObject
+
+SparklineTimePeriod
+
+TimeResponse
+
+TradeHistoryType
+
+TradeHistoryResponseObject
+
+TradeHistoryResponse
+
+TradeType
+
+TradeResponseObject
+
+TradeResponse
+
+TransferType
+
+TransferResponseObject
+
+TransferResponse
+
+ParentSubaccountTransferResponse
+
+TransferBetweenResponse
+
+TurnkeyAuthResponse
+
+SigninMethod
+
+SignInRequest
+
+AppleLoginResponse
+
+AppleLoginRedirectRequest
+
+MegavaultHistoricalPnlResponse
+
+PnlTickInterval
+
+VaultHistoricalPnl
+
+VaultsHistoricalPnlResponse
+
+VaultPosition
+
+MegavaultPositionResponse--------------------------------------------------------------------------------
+v3 dYdX Documentation (https://dydxprotocol.github.io/v4-documentation/)
+citeturn615search3 [wordlim: 200] Crawled: 2.5 years ago;             "netFunding": "500", ...       "netFunding": "500", ... unfillableAt  | Time order was either filled or canceled. ...     `const allFills: { fills: FillResponseObject[] } = await client.private.getFills( ... Description: Get the balance of the dYdX insurance fund.
+## Get Fills
+
+> Get Fills
+    
+    `from dydx3.constants import MARKET_BTC_USD
+    
+    all_fills = client.private.get_fills(
+      market=MARKET_BTC_USD,
+    )
+    `
+    
+    `const allFills: { fills: FillResponseObject[] } = await client.private.getFills(
+      {
+        market: Market.BTC_USD,
+      },
+    );
+    `
+    
+    `{
+      "fills": [
+        {
+          "id": "foo",
+          "side": "BUY",
+          "liquidity": "TAKER",
+          "type": "LIMIT",
+          "market": "BTC-USD",
+          "orderId": "id",
+          "price": "29000",
+          "size": "0.001",
+          "fee": "100",
+          "createdAt": "2021-01-05T16:33:43.163Z"
+        },
+        ...
+      ]
+    }
+    `
+
+### HTTP Request
+
+`GET v3/fills`
+
+Description: Get Fills for a user by specified parameters.
+
+### Request
+
+Parameter  | Description
+--- | ---
+market  | (Optional) Market of the fills.
+orderId  | (Optional) Unique order id. Will only fetch a single order.
+limit  | (Optional) The maximum number of fills that can be fetched via this request. Note, this cannot be greater than 100.
+createdBeforeOrAt  | (Optional) Set a date by which the fills had to be created.
+
+### Response
+
+Parameter  | Description
+--- | ---
+fills  | Array of fills. See below for an individual example.
+
+### Fill
+
+Parameter  | Description
+--- | ---
+id  | The unique id assigned by dYdX.
+side  | Either `BUY` or `SELL.`
+liquidity  | Either `MAKER` or `TAKER.`
+type  | The type of the fill.
+market  | Market of the fill.
+orderId  | Id of the order which caused this fill. null if type is `LIQUIDATED` or `LIQUIDATION``.
+price  | The price the fill occurred at (in quote / base currency).
+
+## Get Funding Payments
+
+> Get Funding Payments
+    
+    `from dydx3.constants import MARKET_BTC_USD
+    
+    funding_payments = client.private.get_funding_payments(
+      market=MARKET_BTC_USD,
+      limit=75,
+    )
+    `
+    
+    `const fundingPayments: { fundingPayments: FundingResponseObject } = await client.private.getFundingPayments(
+      {
+        market: Market.BTC_USD,
+        limit: 75,
+      },
+    );
+    `
+    
+    `{
+      "fundingPayments": [{
+        "market": "BTC-USD",
+        "payment": "10000",
+        "rate": "0.0000125000",
+        "positionSize": "500",
+        "price": "90",
+        "effectiveAt": "2021-01-04T23:44:59.690Z"
+      }]
+    }
+    `
+
+### HTTP Request
+
+`GET v3/funding`
+
+Description: Get Funding Payments made to an account.
+
+### Request
+
+Parameter  | Description
+--- | ---
+market  | (Optional) Market of the funding payments.
+limit  | (Optional) The maximum number of funding payments that can be fetched via this request. Note, this cannot be greater than 100.
+effectiveBeforeOrAt  | (Optional) Set a date by which the funding payments had to be created.
+
+### Response
+
+Parameter  | Description
+--- | ---
+market  | Market corresponding to the funding payment.
+payment  | Change in the `quoteBalance` of the account. Positive if the user received funding and negative if the user paid funding.
+rate  | Funding rate at the time of this payment (as a 1-hour rate).
+positionSize  | User's position size at the time of this funding payment. positive if long, negative if short.
+--------------------------------------------------------------------------------
+Vaults in dydx::indexer - Rust (https://docs.rs/dydx/latest/dydx/indexer/struct.Vaults.html)
+citeturn615search4 [wordlim: 200] Crawled: 4 months ago;   * get_megavault_historical_pnl
+
+## Vaults
+
+## dydx0.3.0
+
+## Vaults
+
+### Methods
+
+  * get_megavault_historical_pnl
+  * get_megavault_positions
+  * get_vaults_historical_pnl
+
+
+# Struct Vaults [Button: Copy item path]
+
+Source
+    
+    `pub struct Vaults<'a> { /* private fields */ }`
+
+Expand description
+
+Vaults dispatcher.
+
+Check the example.
+
+## Implementations§
+
+Source§
+
+### impl<'a> Vaults<'a>
+
+Source
+
+#### pub async fn get_megavault_historical_pnl( &self, resolution: PnlTickInterval, ) -> Result<Vec<PnlTicksResponseObject>, Error>
+
+MegaVault historical PnL.
+
+Source
+
+#### pub async fn get_vaults_historical_pnl( &self, resolution: PnlTickInterval, ) -> Result<Vec<VaultHistoricalPnl>, Error>
+--------------------------------------------------------------------------------
+Example #1: Placing, Replacing, and Canceling Orders | dYdX Chain Technical Docs (https://docs.dydx.community/dydx-chain-technical-docs/getting-started/developer-tools/dydx-chain-client-for-python/example-1-placing-replacing-and-canceling-orders)
+citeturn615search5 [wordlim: 200] Crawled: 11 months ago;                 fill_0 = fills[0] ...         # Get funding ... PreviousdYdX Chain Client for Python NextExmaple #2: Trading with HRN
+                print(f'{order_0}')
+                order_0_id = order_0['id']
+                order_response = client.account.get_order(order_id=order_0_id)
+                order = order_response.data
+                order_id = order['id']
+        except:
+            print('failed to get orders')
+    
+    
+        # Get fills
+        try:
+            fills_response = client.account.get_subaccount_fills(address, 0)
+            print(f'{fills_response.data}')
+            fills = fills_response.data['fills']
+            if len(fills) > 0:
+                fill_0 = fills[0]
+                print(f'{fill_0}')
+        except:
+            print('failed to get fills')
+    
+        # Get funding
+        try:
+            funding_response = client.account.get_subaccount_funding(address, 0)
+            print(f'{funding_response.data}')
+            funding = funding_response.data['fundingPayments']
+            if len(funding) > 0:
+                funding_0 = funding[0]
+                print(f'{funding_0}')
+        except:
+            print('failed to get funding')
+    
+        # Get historical pnl
+        try:
+            historical_pnl_response = client.account.get_subaccount_historical_pnls(address, 0)
+            print(f'{historical_pnl_response.data}')
+            historical_pnl = historical_pnl_response.data['historicalPnl']
+            if len(historical_pnl) > 0:
+                historical_pnl_0 = historical_pnl[0]
+                print(f'{historical_pnl_0}')
+        except:
+            print('failed to get historical pnl')
+    
+    except:
+        print('from_mnemonic failed')`
+
+PreviousdYdX Chain Client for PythonNextExmaple #2: Trading with HRN
+
+Last updated 1 year ago--------------------------------------------------------------------------------
+dYdX API — Cryptocurrency — GreatAPIs (https://greatapis.com/api/dydx/)
+citeturn615search6 [wordlim: 200] Crawled: last week; GET`/vault/v1/megavault/historicalPnl`
+Responses
+Status  | Description  | Schema
+--- | --- | ---
+`200`  | Ok  | `ParentSubaccountTransferResponse`
+
+turnkey 3
+
+POST`/turnkey/appleLoginRedirect`
+
+Request body
+
+`application/json` — `AppleLoginRedirectRequest` (required)
+
+Responses
+Status  | Description  | Schema
+--- | --- | ---
+`200`  | Ok  | `AppleLoginResponse`
+
+POST`/turnkey/signin`
+
+Request body
+
+`application/json` — `SignInRequest` (required)
+
+Responses
+Status  | Description  | Schema
+--- | --- | ---
+`200`  | Ok  | `TurnkeyAuthResponse`
+
+POST`/turnkey/uploadAddress`
+
+Request body
+
+`application/json` (required)
+
+Responses
+Status  | Description  | Schema
+--- | --- | ---
+`200`  | Ok  | —
+
+vault 3
+
+GET`/vault/v1/megavault/historicalPnl`
+
+Parameters
+Name  | In  | Required  | Type
+--- | --- | --- | ---
+`resolution`  | query  | no  | —
+
+Responses
+Status  | Description  | Schema
+--- | --- | ---
+`200`  | Ok  | `MegavaultHistoricalPnlResponse`
+
+GET`/vault/v1/megavault/positions`
+
+Responses
+Status  | Description  | Schema
+--- | --- | ---
+`200`  | Ok  | `MegavaultPositionResponse`
+
+GET`/vault/v1/vaults/historicalPnl`
+
+Parameters
+Name  | In  | Required  | Type
+--- | --- | --- | ---
+`resolution`  | query  | no  | —
+
+Responses
+Status  | Description  | Schema
+--- | --- | ---
+`200`  | Ok  | `VaultsHistoricalPnlResponse`
+
+--------------------------------------------------------------------------------
+Vault Operations | dydxprotocol/v4-clients | DeepWiki (https://deepwiki.com/dydxprotocol/v4-clients/6.4-vault-operations)
+citeturn615search7 [wordlim: 200] Crawled: last month; The Indexer REST API provides endpoints to query Megavault positions and performance metrics. ... ### Megavault Historical PnL
+## Query Operations
+
+### Vault Position Queries
+
+The Indexer REST API provides endpoints to query Megavault positions and performance metrics. These queries do not require authentication and return aggregated vault data.
+
+Indexer Vault Endpoints
+
+Sources:
+
+  * v4-client-rs/client/src/indexer/rest/types.rs616-667
+
+### Megavault Historical PnL
+
+Query profit and loss reports aggregated by time interval.
+
+Rust Implementation:
+    
+    `
+    
+    // client/src/indexer/rest/client/vaults.rs
+    
+    pub async fn get_megavault_historical_pnl(
+    
+        &self,
+    
+        resolution: PnlTickInterval
+    
+    ) -> Result<MegaVaultHistoricalPnlResponse, Error>
+    
+    `
+
+Parameters:
+
+  * `resolution`: Time interval for aggregation (`PnlTickInterval::Hour` or `PnlTickInterval::Day`)
+
+Response Structure:
+
+Field  | Type  | Description
+--- | --- | ---
+`megavault_pnl`  | `Vec<PnlTicksResponseObject>`  | List of PnL snapshots
+`block_height`  | `Height`  | Block height of snapshot
+`block_time`  | `DateTime<Utc>`  | Timestamp of snapshot
+--------------------------------------------------------------------------------
+GitHub - maxholloway/dydx_vaults_research · GitHub (https://github.com/maxholloway/dydx_vaults_research)
+citeturn615search8 [wordlim: 200] Crawled: 2 months ago;     ./build/dydxprotocold query vault list-vault --limit 1000 --node https://dydx-rpc.polkachu.com > $TARGET_DIR ... ### Run script to get all fills ... ### Run script to get all funding payments
+
+Max Holloway
+
+## Replicating the results
+
+### Python environment
+    
+    python3 -m venv venv && source venv/bin/activate && pip3 install -r requirements.txt
+
+### Get perp market info
+
+Necessary for joining the vault with the clob pair that it's quoting.
+    
+    curl -X GET https://indexer.dydx.trade/v4/perpetualMarkets | python3 -m json.tool > info/market_info.json
+
+### Get vaults info
+    
+    TARGET_DIR="<fully/qualified/path/to/this/repo>/info/vaults.yml"
+    cd ~/dev/v4-chain/protocol
+    ./build/dydxprotocold query vault list-vault --limit 1000 --node https://dydx-rpc.polkachu.com > $TARGET_DIR
+    cd -
+
+### Parse vaults info and market name into json file
+    
+    cd src && python3 parse_vault_addresses.py && cd -
+
+### Run script to get all fills
+    
+    cd src && python3 get_all_fills.py && cd -
+
+### Run script to get all funding payments
+    
+    cd src && python3 get_all_fundings.py && cd -
+
+### [currently broken due to indexer bug] Run script to get all deposits
+    
+    cd src && python3 get_all_deposits.py && cd -
+
+### Run research notebook
+
+Use jupyter notebook (e.g., I do so in VS Code), to open up `./analysis/overview.ipynb`. All of the cells should run.
+
+## About
+
+No description, website, or topics provided.
+
+### Resources
+
+Readme
+
+Activity
+
+### Stars
+
+0 stars
+
+### Watchers
+
+1 watching
+
+### Forks
+
+0 forks
+
+## Releases
+
+## Packages
+
+## Used by
+
+## Contributors
+
+## Languages
+
+You can’t perform that action at this time.--------------------------------------------------------------------------------
+Indexer Client · dYdX · v4 (https://docs.dydx.exchange/api_integration-clients/indexer_client)
+citeturn615search9 [wordlim: 200] Crawled: today; ### Get Historical Funding ...     `// address is the wallet address on dYdX Chain, subaccountNumber is the subaccount number ... ### Get Fills
+    const positions = response.positions;`
+
+Params and Response: See Indexer API
+
+### Get Perpetual Positions
+
+[Button: TypeScript][Button: Python]
+    
+    `// address is the wallet address on dYdX Chain, subaccountNumber is the subaccount number
+    const response = await client.account.getSubaccountPerpetualPositions(address, subaccountNumber);
+    const positions = response.positions;`
+
+Params and Response: See Indexer API
+
+### Get Orders
+
+[Button: TypeScript][Button: Python]
+    
+    `// address is the wallet address on dYdX Chain, subaccountNumber is the subaccount number
+    const response = await client.account.getSubaccountOrders(address, subaccountNumber);
+    const orders = response;`
+
+Params and Response: See Indexer API
+
+### Get Order
+
+[Button: TypeScript][Button: Python]
+    
+    `// orderId is the ID of the order
+    const response = await client.account.getOrder(orderId);
+    const order = response;`
+
+Params and Response: See Indexer API
+
+### Get Fills
+
+[Button: TypeScript][Button: Python]
+    
+    `// address is the wallet address on dYdX Chain, subaccountNumber is the subaccount number
+    const response = await client.account.getSubaccountFills(address, subaccountNumber);
+    const fills = response.fills;`
+
+Params and Response: See Indexer API
+
+### Get Transfers
+
+[Button: TypeScript][Button: Python]
+    
+    `// address is the wallet address on dYdX Chain, subaccountNumber is the subaccount number
+    const response = await client.account.getSubaccountTransfers(address, subaccountNumber);
+    const transfers = response.transfers;`
+
+Params and Response: See Indexer API
+
+### Get Historical PNL
+
+[Button: TypeScript][Button: Python]
+    
+    `// address is the wallet address on dYdX Chain, subaccountNumber is the subaccount number
+    const response = await client.account.getSubaccountHistoricalPNLs(address, subaccountNumber);
+    const historicalPnl = response.historicalPnl;`
+
+Params and Response: See Indexer API--------------------------------------------------------------------------------
+Perps Overview – Definitive (https://ddp.definitive.fi/api/perps/overview)
+citeturn615search10 [wordlim: 200] Crawled: today; Perpetual futures for the portfolio bound to your API key: live market data for every listed market, account state, orders, fills, funding payments and fees, an order preview, and transfers in both directions — vault-funded deposits into the perps account and partner-signed withdrawals back to the portfolio's Arbitrum trading vault.
+
+# 
+
+Perps Overview
+
+Perpetual futures for the portfolio bound to your API key: live market data for every listed market, account state, orders, fills, funding payments and fees, an order preview, and transfers in both directions — vault-funded deposits into the perps account and partner-signed withdrawals back to the portfolio's Arbitrum trading vault.
+
+Endpoints
+
+Endpoint  | Method  | Purpose
+--- | --- | ---
+`/perps/markets`  | GET  | All markets with live mark/funding/OI
+`/perps/markets/{symbol}/orderbook`  | GET  | L2 snapshot
+`/perps/markets/{symbol}/candles`  | GET  | OHLCV
+`/perps/markets/{symbol}/quote`  | GET  | Size-aware execution estimate
+`/perps/markets/{symbol}/funding`  | GET  | Historical + predicted funding
+`/perps/account`  | GET  | Balance, positions, margins
+`/perps/account/status`  | GET  | Onboarding state
+`/perps/orders/open`  | GET  | Open orders
+`/perps/orders/history`  | GET  | Order history
+`/perps/fills`  | GET  | Trade fills
+--------------------------------------------------------------------------------
+Indexed dYdX Blockchain Data / SonarX (https://www.sonarx.com/chains/dydx)
+citeturn615search11 [wordlim: 200] Crawled: last month; ### dYdX data on SonarXSonarX indexes what the chain commits: blocks and transactions with their typed messages, fills and clearing prices, subaccount collateral and open positions, funding payments, liquidations, IBC transfers and staking records. ... Perp market-structure research is the first workload: funding and basis series, liquidation clustering, and fill distribution measured from the venue’s own settlements rather than sampled.
+--------------------------------------------------------------------------------
+INTERNAL CONTROLS (https://www.ctas.tennessee.edu/sites/default/files/2022-04/Internal%20Controls%20-%20County%20Clerk%20Jan%202016FINAL.pdf)
+citeturn615search12 [wordlim: 200] Published: 10.8 years ago; general fund (as it relates to the county clerk’s office) are properly recorded and accounted for to ... Physical security of the office: ... e) Is there a vault in the office? ... g) Who has access to the vault? ... b) Who fills out purchase order requisitions? ... d) How is it known that funding is available?
+--------------------------------------------------------------------------------
+INTERNAL CONTROLS (https://www.ctas.tennessee.edu/sites/default/files/2022-04/Internal%20Controls%20-%20Trustee%20Jan%202016FINAL.pdf)
+citeturn615search13 [wordlim: 200] Published: 10.8 years ago; Whether revenues and expenditures in the trustee’s fee account and county general fund (as it relates ... Physical security of the office: ... e) Is there a vault in the office? ... a) Who fills out purchase order requests? ... c) Who coordinates with county finance to ensure funding is available, and the vendor is
+--------------------------------------------------------------------------------
+INTERNAL CONTROLS (https://www.ctas.tennessee.edu/sites/default/files/2022-04/Internal%20Controls%20-%20Assessor%20Apr%202016FINAL.pdf)
+citeturn615search14 [wordlim: 200] Published: 6 months ago; Physical security of the office: ... Is there a vault in the office? ... Who fills out purchase order requisitions for the office? ... How is it known whether funding is available in the budget for the requested expenditure ... What forms must be filled out and signed before the card is checked out?
+--------------------------------------------------------------------------------
+TOWN OF SUDBURY COMMUNITY PRESERVATION COMMITTEE (https://sudbury.ma.us/cpc/wp-content/uploads/sites/275/2014/08/TownClerkNewTownVault.pdf)
+citeturn615search15 [wordlim: 200] Published: 16.9 years ago; Crawled: 16.9 years ago; Project Name: Construction of Town Hall Vault ... <th>Other Funding Sources (amount and source)</th> ... <td>HVAC System — $84,000<br>Vault and NOVAC System<br>Shelving and Flooring — $153,742<br>Engineer — $10,000<br>Architect — $15,000<br>Wiring, Plumbing, Painting — $15,000<br>Footings, Window fills — $75,000<br>Handicapped Lift — $30,000<br>Contingencies — $19,138</td>
+--------------------------------------------------------------------------------
+DyDx Request for Certain Features (and question as to when they may be implemented - if they're currently being developed?) (https://www.reddit.com/r/dydxprotocol/comments/qd299l)
+citeturn615reddit16 [wordlim: 200] Published: 5.0 years ago; Crawled: 5.0 years ago; Being able to plot those within DyDx itself would make the trading process much easier and smoother than being stuck using TradingView's app, generating the desired position for entry/exit, then cross-referencing price with DyDx's exchange to ensure the pricing and movements are the same, rather than seeing any deviation in price. ... 4) Have a running tab for PnL across trades, allowing users to parse the data to see - specifically - what PnL is for each trade, rather than having to go into "fills" and manually calculate it based off of "total/fee" and trade size, manually subtracting the sum of one from the other - even when an entire round-trip trade if using market orders may include 3 separate fills at different prices on one side of the trade, yet one fill on the opposite side of a trade.5) Having a section dedicated to the fees paid on each trade, fees paid as per the funding fee, that would make it easy to keep track of what the fee cost overall is looking like.
+--------------------------------------------------------------------------------
+Microsoft Word - 03 - CIP Program Highlights.doc (https://assets.contentstack.io/v3/assets/blteea73b27b731f985/blt9720ea78b53c1f2f/Recommended_CIP_FY14-FY19.pdf)
+citeturn615search17 [wordlim: 200] Published: 13.4 years ago; vault fills with water and makes it difficult to service the meter. ... Funding
+--------------------------------------------------------------------------------
+Libero SoC Release Notes (https://www.microchip.com/content/dam/mchp/documents/FPGA/swdocs/libero/libero_soc_v2025_1_release_notes.pdf)
+citeturn615search18 [wordlim: 200] Published: 9 months ago; The historical vsim argument called -novopt is now ... SoC MSS, and MegaVault (Ask a Question)
+--------------------------------------------------------------------------------
+[Removed] (https://www.reddit.com/r/defi/comments/1v8yapj/removed/)
+citeturn615reddit19 [wordlim: 200] Published: 2 months ago; It moves it off "do I trust this team" and onto "do I trust this contract", which is at least a thing you can go read. ... You can make it a precondition if you bound the terms instead of the outcome: submit a minimum acceptable output with the swap, and a bad fill reverts rather than fills. ... Slippage, partial fills, a venue that is up but degraded, I cannot manufacture those on paper. ...       So on funding it small: not redundant, but I would not expect it to teach you fill quality.
+--------------------------------------------------------------------------------
+MegaVault: Your Gateway to Automatic Liquidity and Yield | dYdX Foundation (https://www.dydx.foundation/blog/megavault-your-gateway-to-automatic-liquidity-and-yield)
+citeturn615view0 [wordlim: 200] Crawled: 2 months ago; Content type: text/html; Source: open({"ref_id":"https://www.dydx.foundation/blog/megavault-your-gateway-to-automatic-liquidity-and-yield","lineno":null}); Total lines: 93
+--------------------------------------------------------------------------------
+ (https://docs.dydx.community/dydx/dydx-features/megavault)
+citeturn615view1 [wordlim: 200] Crawled: today; Content type: text/plain; Source: open({"ref_id":"https://docs.dydx.community/dydx/dydx-features/megavault","lineno":null}); Total lines: 274

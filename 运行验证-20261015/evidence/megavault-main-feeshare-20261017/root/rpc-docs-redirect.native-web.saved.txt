@@ -1,0 +1,53 @@
+Empty search results
+No results were found for the provided queries--------------------------------------------------------------------------------
+CometBFT Documentation - Cosmos Docs (https://docs.cometbft.com/v0.38/rpc/)
+citeturn624view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://docs.cometbft.com/v0.38/rpc/","lineno":null}); Redirected to URL: https://docs.cosmos.network/cometbft/latest/docs/README; Total lines: 59
+L0: > ## Documentation Index
+L1: >
+L2: > Fetch the complete documentation index at: cite0†/llms.txt L3: >
+L4: > Use this file to discover all available pages before exploring further.
+L5: 
+L6: cite1†iframe†www.googletagmanager.com cite2†Skip to main content L7: 
+L8: cite3†Cosmos Docs home page L9: 
+L10: Search...
+L11: 
+L12: Navigation
+L13: 
+L14: CometBFT
+L15: 
+L16: CometBFT Documentation
+L17: 
+L18: CometBFT
+L19: 
+L20: # CometBFT Documentation
+L21: 
+L22: CometBFT is a blockchain application platform.
+L23: 
+L24: Copy page Copy page
+L25: #
+L26: 
+L27: cite4†​ L28: 
+L29: CometBFT
+L30: Welcome to the CometBFT documentation! CometBFT is a blockchain application platform; it provides the equivalent of a web server, database, and supporting libraries for blockchain applications written in any programming language. Like a web server serving web applications, CometBFT serves blockchain applications. More formally, CometBFT performs Byzantine Fault Tolerant (BFT) State Machine Replication (SMR) for arbitrary deterministic, finite state machines. For more background, see cite5†What is CometBFT? .
+L31: To get started quickly with an example application, see the cite6†quick start guide . To learn about application development on CometBFT, see the cite7†Application Blockchain Interface . For more details on using CometBFT, see the respective documentation for cite8†CometBFT internals , cite9†benchmarking and monitoring , and cite10†network deployments .
+L32: ##
+L33: 
+L34: cite11†​ L35: 
+L36: Contribute
+L37: To recommend a change to the documentation, please submit a PR. Each major release’s documentation is housed on the corresponding release branch, e.g., for the v0.34 release series, the documentation is housed on the `v0.34.x` branch. When submitting changes that affect all releases, please start by submitting a PR to the docs on `main`—this will be backported to the relevant release branches. If a change is exclusively relevant to a specific release, please target that release branch with your PR.
+L38: Changes to the documentation will be reviewed by the team and, if accepted and merged, published to (/cometbft) for the respective version(s). The build process for the documentation is housed in the cite12†Cosmos docs repository†github.com .
+L39: Was this page helpful?
+L40: 
+L41: Yes No
+L42: 
+L43: cite13†Intro L44: 
+L45: cite3†Cosmos Docs home page L46: 
+L47: cite14†twitter†twitter.com cite15†github†github.com cite16†discord†discord.gg cite17†website†cosmos.network L48: 
+L49: Technology
+L50: 
+L51: cite18†Cosmos SDK cite19†Cosmos EVM cite20†IBC cite21†CometBFT cite15†Cosmos Github†github.com cite22†Cosmos HackerOne†hackerone.com cite23†Skip Go cite24†Cosmos Hub L52: 
+L53: Get In Touch
+L54: 
+L55: cite16†Developer Discord†discord.gg cite25†Community Telegram†t.me cite26†Contact Us†www.cosmoslabs.io cite17†Cosmos Website†cosmos.network L56: 
+L57: Legal
+L58: cite27†Privacy†cosmos.network cite28†Trademark†cosmos.network cite29†Security Policy cite30†Security Audits cite31†Bug Bounty Program 
